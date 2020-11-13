@@ -1,0 +1,39 @@
+<?xml version="1.0"?>  
+<system name="SR22T Fuel System"> 
+	<!-- Adapted from the FlightGear wiki -->
+	<!-- tank[2] collector tank connected to the engine fuel pump, tank[0] and tank[1] feeds the collector through valves.
+	Negative Gs (<-0.5g) cuts the supply to the collector tanks -->
+
+	<channel name="Fuel pumping">    
+
+		<switch>
+			<default value="-0.2"/>
+			<test logic="OR" value="0">
+				/controls/fuel/tank-selector NE 1
+				propulsion/tank[0]/contents-lbs LE 0
+				propulsion/tank[2]/contents-lbs GE 0.5
+				accelerations/Nz LE 0.0
+			</test>
+			<output>propulsion/tank[0]/external-flow-rate-pps</output>
+		</switch>
+
+		<switch>
+			<default value="-0.2"/>
+			<test logic="OR" value="0">
+				/controls/fuel/tank-selector NE 2
+				propulsion/tank[1]/contents-lbs LE 0
+				propulsion/tank[2]/contents-lbs GE 0.5
+				accelerations/Nz LE 0.0 
+			</test>
+			<output>propulsion/tank[1]/external-flow-rate-pps</output>
+		</switch>
+
+		<summer>
+			<input>-propulsion/tank[0]/external-flow-rate-pps</input>
+			<input>-propulsion/tank[1]/external-flow-rate-pps</input>
+			<output>propulsion/tank[2]/external-flow-rate-pps</output>
+		</summer>  
+
+	</channel>      
+
+</system>

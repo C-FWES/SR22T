@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--	simulates a small tug -->
+<!--	characteristics similar to TowFlexx TF-2 https://towflexx.de/flugzeugschlepper/tf2-bis-4000kg-mtow/ -->
+<!--	force:
+		maximal power:	500W
+		ref. 1: https://planetcalc.com/1908/
+		ref. 2: https://www.physicsforums.com/threads/calculating-driving-force-from-wheel-rpm-wheel-radius-and-engine-power.345371/post-2391820: force * radius = wheel torque
+		-->
+		
+ <system name="pushback">
+	 <property value="0">systems/pushback/connect</property>
+	 <property value="0">systems/pushback/target-power-watts</property>
+	 <channel name="Pushback">
+		 
+		 <switch name="systems/pushback/linked">
+			 <default value="-1"/>
+			 <test value="0">
+				 systems/pushback/connect eq 1
+				 /gear/gear[0]/wow == 1
+				 gear/unit[0]/wheel-speed-fps lt 50
+			 </test>
+		 </switch>
+		 
+		 <switch>
+			 <default value="1"/>
+			 <test value="0">
+				 systems/pushback/linked eq 0
+			 </test>
+			 <output>gear/unit[0]/castered</output>
+		 </switch>
+		 
+		 <pure_gain>
+			 <input>fcs/rudder-cmd-norm</input>
+			 <gain>-0.25</gain>
+			 <output>fcs/steer-cmd-norm</output>
+		 </pure_gain>
+		 
+		 <fcs_function name="systems/pushback/angular-velocity">
+			 <function>
+				<product>
+					<value>0.10471975512</value> <!-- 2*pi / 60 -->
+					<!-- RPM: wheel speed (fps) / wheel radius (ft) -->
+					<property>gear/unit[0]/wheel-speed-fps</property> <!-- wheel speed -->
+					<value>1.57927461</value> <!-- 1/0.6332021ft -->
+				</product>
+			</function>
+		</fcs_function>
+		
+		<!-- Define "deadzone" to avoid division /0 -->
+		<fcs_function name="systems/pushback/angular-velocity-processed">
+			<function>
+				<table>
+					<independentVar lookup="row">systems/pushback/angular-velocity</independentVar>
+					<tableData>
+						-10000	10000
+						-1	1
+						-0.1	0.1
+						0.1	0.1
+						1	1
+						10000	10000
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
+		 <fcs_function>
+			 <function>
+				 <product>
+					<sum>
+						<property>systems/pushback/linked</property>
+						<value>1</value>
+					</sum>
+					<!-- ref. 2: force = torque/radius -->
+					<quotient>
+						<!-- ref. 1: torque = power/angular velocity -->
+						<quotient>
+							<property>systems/pushback/target-power-watts</property>
+							<property>systems/pushback/angular-velocity-processed</property>
+						</quotient>
+						<value>0.193</value> <!-- radius -->
+					</quotient>
+				</product>
+			</function>
+			 <output>external_reactions/pushback/magnitude</output>
+		 </fcs_function>
+		 
+		 <fcs_function name="Pushback Force X">
+			 <function>
+				 <cos>
+					 <toradians><property>fcs/steer-pos-deg[0]</property></toradians>
+				 </cos>
+			 </function>
+			 <output>external_reactions/pushback/x</output>
+		 </fcs_function>
+		 
+		 <fcs_function name="Pushback Force Y">
+			 <function>
+				 <sin>
+					 <toradians><property>fcs/steer-pos-deg[0]</property></toradians>
+				 </sin>
+			 </function>
+			 <output>external_reactions/pushback/y</output>
+		 </fcs_function>
+		 
+	 </channel>
+ </system>

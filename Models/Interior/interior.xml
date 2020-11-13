@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PropertyList>
+	<path>interior.ac</path>
+	<!--Sticks-->
+	<animation>
+		<type>rotate</type>
+		<object-name>stickL</object-name>
+		<object-name>trimLbutton</object-name>
+		<object-name>stickLbutton</object-name>
+		<object-name>stickLaxis</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>60</factor>
+		<center>
+			<x-m> -1.932 </x-m>
+			<z-m> -0.032 </z-m>
+			<y-m> 0.520 </y-m>
+		</center>
+		<axis>
+			<x> -1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>	
+	</animation>	
+
+	<animation>
+		<type>rotate</type>
+		<object-name>stickR</object-name>
+		<object-name>trimRbutton</object-name>
+		<object-name>stickRbutton</object-name>
+		<object-name>stickRaxis</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>60</factor>
+		<center>
+			<x-m> -1.932 </x-m>
+			<z-m> -0.032 </z-m>
+			<y-m> -0.520 </y-m>
+		</center>
+		<axis>
+			<x> -1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>	
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>stickL</object-name>
+		<object-name>trimLbutton</object-name>
+		<object-name>stickLbutton</object-name>
+		<object-name>stickLaxis</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>0.05</factor>
+		<!-- <center>
+			<x-m> -1.932 </x-m>
+			<z-m> -0.032 </z-m>
+			<y-m> 0.520 </y-m>
+		</center> -->
+		<axis>
+			<x> -1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>	
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>stickR</object-name>
+		<object-name>trimRbutton</object-name>
+		<object-name>stickRbutton</object-name>
+		<object-name>stickRaxis</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>0.05</factor>
+		<!-- <center>
+			<x-m> -1.932 </x-m>
+			<z-m> -0.032 </z-m>
+			<y-m> 0.520 </y-m>
+		</center> -->
+		<axis>
+			<x> -1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>	
+	</animation>
+
+	<animation>
+		<object-name>interior</object-name>
+		<object-name>shell</object-name>
+		<object-name>panel</object-name>
+		<object-name>pedestal</object-name>
+		<object-name>seatFL</object-name>
+		<object-name>seatFR</object-name>
+		<object-name>seatsR</object-name>
+		<object-name>intwindows</object-name>
+		<object-name>intwindowL</object-name>
+		<object-name>intwindowR</object-name>
+	</animation>
+	<effect>
+		<inherits-from>Aircraft/SR22T/Models/Effects/interior-glass</inherits-from>
+		<object-name>intwindows</object-name>
+		<object-name>intwindowL</object-name>
+		<object-name>intwindowR</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/SR22T/Models/Effects/interior-shadow</inherits-from>
+		<object-name>interior</object-name>
+		<object-name>shell</object-name>
+		<object-name>panel</object-name>
+		<object-name>pedestal</object-name>
+		<object-name>seatFL</object-name>
+		<object-name>seatFR</object-name>
+		<object-name>seatsR</object-name>
+	</effect>
+	<!--Switches-->
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>battery1</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/electric/battery1-switch</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>battery1</object-name>
+		<property>controls/electric/battery1-switch-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>battery2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/electric/battery2-switch</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>battery2</object-name>
+		<property>controls/electric/battery2-switch-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>alt1</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/alt1</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>alt1</object-name>
+		<property>controls/engines/engine[0]/alt1-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>alt2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/alt2</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>alt2</object-name>
+		<property>controls/engines/engine[0]/alt2-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>avionics</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/electric/avionics-switch</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>avionics</object-name>
+		<property>controls/electric/avionics-switch-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>nav_switch</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/lighting/nav-lights</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>nav_switch</object-name>
+		<property>controls/lighting/nav-lights-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>strobe_switch</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/lighting/strobe-lights</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>strobe_switch</object-name>
+		<property>controls/lighting/strobe-lights-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>land_switch</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/lighting/landing-light</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>land_switch</object-name>
+		<property>controls/lighting/landing-light-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>pitotheat_switch</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/anti-ice/pitot-heat</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>pitotheat_switch</object-name>
+		<property>controls/anti-ice/pitot-heat-pos</property>
+		<factor> -30 </factor>
+		<center>
+			<x-m> -1.94728 </x-m>
+			<z-m> 0.04713 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<!--IGNITION KEY-->
+	<animation>
+		<type>pick</type>
+		<object-name>ignition_bg</object-name>
+		<object-name>ignition_turn</object-name>
+		<action>
+			<name>get_key</name>
+			<button>0</button>
+			<binding>
+				<condition>
+					<equals>
+						<property>/controls/engines/engine/magnetos</property>
+						<value>0</value>
+					</equals>
+					<not>
+						<property>/controls/engines/engine/starter</property>
+					</not>
+				</condition>
+				<command>property-toggle</command>
+				<property>/controls/engines/key</property>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<condition>
+					<equals>
+						<property>/controls/engines/engine/magnetos</property>
+						<value>0</value>
+					</equals>
+					<not>
+						<property>/controls/engines/engine/starter</property>
+					</not>
+				</condition>
+				<command>set-tooltip</command>
+				<tooltip-id>get-key</tooltip-id>
+				<label>Put key</label>
+			</binding>
+		</hovered>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>ignition_key</object-name>
+		<object-name>start</object-name>
+		<condition>
+			<property>/controls/engines/key</property>
+		</condition>
+	</animation>
+	<!-- Magneto switch -->
+	<animation>
+		<type>knob</type>
+		<object-name>ignition_key</object-name>
+		<visible>true</visible>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/engines/engine/magnetos</property>
+				<factor>1</factor>
+				<min>0</min>
+				<max>3</max>
+			</binding>
+		</action>
+		<!--
+        <increase>
+            <binding>
+                <command>nasal</command>
+                <script>c172p.click("magneto-forward")</script>
+            </binding>
+        </increase>
+        <decrease>
+            <binding>
+                <command>nasal</command>
+                <script>c172p.click("magneto-back")</script>
+            </binding>
+        </decrease>-->
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>magneto-switch</tooltip-id>
+				<label>Magnetos: %s</label>
+				<property>controls/engines/engine/magnetos</property>
+				<mapping>nasal</mapping>
+				<script>
+                    var m = arg[0];
+                    if (m == 1) return 'RIGHT';
+                    if (m == 2) return 'LEFT';
+                    if (m == 3) return 'BOTH';
+                    return 'OFF';
+                </script>
+			</binding>
+		</hovered>
+	</animation>
+	<!-- Starter -->
+	<animation>
+		<type>pick</type>
+		<object-name>start</object-name>
+		<visible>false</visible>
+		<action>
+			<name>starter</name>
+			<button>0</button>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/engines/engine/starter</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/engines/engine/starter</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>starter-switch</tooltip-id>
+				<label>Engine Starter</label>
+			</binding>
+		</hovered>
+	</animation>
+	<!-- Key rotation animation -->
+	<animation>
+		<type>rotate</type>
+		<object-name>ignition_key</object-name>
+		<object-name>ignition_turn</object-name>
+		<expression>
+			<sum>
+				<product>
+					<!-- 1 if starter is false, 0 if starter is true -->
+					<difference>
+						<value>1</value>
+						<property>/controls/engines/engine/starter-pos</property>
+					</difference>
+					<property>/controls/engines/engine/magnetos-pos</property>
+					<value>30</value>
+				</product>
+				<product>
+					<property>/controls/engines/engine/starter-pos</property>
+					<value>120</value>
+				</product>
+			</sum>
+		</expression>
+		<center>
+			<x-m>-1.98749</x-m>
+			<y-m>-0.53428</y-m>
+			<z-m>0.10659</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	
+	<!-- Fuel Pump Switch -->
+	<animation>
+		<type>pick</type>
+		<object-name>fuel_pump</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/fuel/boost-pump</property>
+				<value>1</value>
+				<value>-1</value>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/fuel/boost-pump</property>
+				<value>-1</value>
+				<value>1</value>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel_pump</object-name>
+		<property>controls/fuel/boost-pump-pos</property>
+		<factor> -18 </factor>
+		<center>
+			<x-m> -1.53685 </x-m>
+			<z-m> -0.18417 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	
+	<!-- Fuel Selector -->
+	<animation>
+		<type>knob</type>
+		<object-name>fuel_selector</object-name>
+		<property>controls/fuel/tank-selector-pos</property>
+		<interpolation>
+			<entry>
+				<ind> 0 </ind>
+				<dep> -180 </dep>
+			</entry>
+			<entry>
+				<ind> 1 </ind>
+				<dep> -75</dep>
+			</entry>
+			<entry>
+				<ind> 2 </ind>
+				<dep> 0</dep>
+			</entry>
+			<entry>
+				<ind> 3 </ind>
+				<dep> 105</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m> -1.42859 </x-m>
+			<y-m> -0.01523 </y-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 0 </y>
+			<z>-1 </z>
+		</axis>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/fuel/tank-selector</property>
+				<min>0</min>
+				<max>3</max>
+				<factor>1</factor>
+			</binding>
+		</action>
+	</animation>
+		
+	
+	<!--Flaps Lever-->
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>flaps_lever</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/flight/flaps-cmd</property>
+				<value>0.5</value>
+				<value>1</value>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/click</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>flaps_lever</object-name>
+		<property>controls/flight/flaps-cmd-pos</property>
+		<factor> -60 </factor>
+		<axis>
+			<x1-m> -1.74759 </x1-m>
+			<y1-m> 0.03787 </y1-m>
+			<z1-m> -0.14771  </z1-m>
+			<x2-m> -1.74281 </x2-m>
+			<y2-m> 0.03787 </y2-m>
+			<z2-m> -0.14268  </z2-m>
+		</axis>
+	</animation>
+	
+	
+	<!--Instruments-->
+	<model>
+		<path>Instruments/MD302/MD302.xml</path>
+		<offsets>
+			<x-m> -1.885 </x-m>
+			<y-m> -0.316 </y-m>
+			<z-m> -0.02891 </z-m>
+			<pitch-deg>-3</pitch-deg>
+		</offsets>
+	</model>
+	<!--<model>
+		<path>Instruments/asi/asi.xml</path>
+		<offsets>
+			<x-m> -1.885 </x-m>
+			<y-m> -0.406 </y-m>
+			<z-m> -0.02891 </z-m>
+			<pitch-deg>-3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Instruments/alt/alt.xml</path>
+		<offsets>
+			<x-m> -1.885 </x-m>
+			<y-m> -0.226 </y-m>
+			<z-m> -0.02891 </z-m>
+			<pitch-deg>-3</pitch-deg>
+		</offsets>
+	</model>-->
+	<model>
+		<path>Instruments/GMA350/GMA350.ac</path>
+		<offsets>
+			<x-m> -1.85861 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m>-0.12359 </z-m>
+			<pitch-deg>-10.5</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Instruments/kx165/kx165-1.xml</path>
+		<offsets>
+			<x-m> -2.27 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> 0.025 </z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Instruments/Perspective/GDU1240-pfd.ac</path>
+		<offsets>
+			<x-m> -1.975 </x-m>
+			<y-m> -0.3 </y-m>
+			<z-m> 0.19 </z-m>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Instruments/Perspective/GDU1240-mfd.ac</path>
+		<offsets>
+			<x-m> -1.96 </x-m>
+			<y-m> 0.03 </y-m>
+			<z-m> 0.19 </z-m>
+			<heading-deg>-6</heading-deg>
+		</offsets>
+	</model><!--
+	<model>
+		<path>Instruments/GMA350/GMA350.ac</path>
+		<offsets>
+			<x-m> -1.788</x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> -0.09 </z-m>
+			<pitch-deg>-32.5</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Instruments/GMC305/GMC305.ac</path>
+		<offsets>
+			<x-m> -1.815</x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> -0.055 </z-m>
+			<pitch-deg>-32.5</pitch-deg>
+		</offsets>
+	</model>-->
+	<!-- Pilot -->
+	<model>
+		<path>../Pilot/pilot.xml</path>
+	</model>
+	<!-- Tableau de bord -->
+	<!--<model>
+    <path>Aircraft/DR400/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -1.859 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.099 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+  </model>-->
+	<!--PEDESTAL-->
+	<!--Throttle Lever-->
+	<animation>
+		<type>slider</type>
+		<object-name>throttle</object-name>
+		<visible>true</visible>
+		<drag-direction>vertical</drag-direction>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/engines/engine/throttle</property>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>throttle</tooltip-id>
+				<label>Throttle: %d%%</label>
+				<mapping>percent</mapping>
+				<property>/controls/engines/engine/throttle</property>
+			</binding>
+		</hovered>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>throttle</object-name>
+		<property>/controls/engines/engine/throttle</property>
+		<factor>-46</factor>
+		<!--23 degree at each max position-->
+		<axis>
+			<y>1</y>
+		</axis>
+		<center>
+			<x-m>-1.55718</x-m>
+			<z-m>-0.26777</z-m>
+		</center>
+	</animation>
+	<!--Mixture Lever-->
+	<animation>
+		<type>slider</type>
+		<object-name>mixture</object-name>
+		<visible>true</visible>
+		<drag-direction>vertical</drag-direction>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/engines/engine/mixture</property>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>throttle</tooltip-id>
+				<label>Mixture: %d%%</label>
+				<mapping>percent</mapping>
+				<property>/controls/engines/engine/mixture</property>
+			</binding>
+		</hovered>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>mixture</object-name>
+		<property>/controls/engines/engine/mixture</property>
+		<factor>-54</factor>
+		<!--23 degree at each max position-->
+		<axis>
+			<y>1</y>
+		</axis>
+		<center>
+			<x-m>-1.55718</x-m>
+			<z-m>-0.25834</z-m>
+		</center>
+	</animation>
+</PropertyList>

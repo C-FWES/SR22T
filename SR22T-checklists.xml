@@ -1,0 +1,901 @@
+<?xml version="1.0"?>
+
+<!-- ONLY TO BE USED FOR FLIGHT SIMULATION, ABSOLUTELY NO WARRANTY! -->
+<!-- partly amended from reference [1], chapters 3 and 4 -->
+
+
+<PropertyList>
+	
+	<checklist>
+		<title>Preflight Inspection</title>
+		<page>
+			<item>
+				<name>CABIN</name>
+			</item>
+			<item>
+				<name>Documents</name>
+				<value>AVAILABLE ON BOARD</value>
+			</item>
+			<item>
+				<name>Avionics Power Switch</name>
+				<value>OFF</value>
+				<condition>
+					<equals>
+						<property>/controls/electric/avionics-switch</property>
+						<value>0</value>
+					</equals>
+				</condition>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/electric/avionics-switch</property>
+					<value>0</value>
+				</binding>
+			</item>
+			<item>
+				<name>BAT 2</name>
+				<value>ON</value>
+				<condition>
+					<equals>
+						<property>/controls/electric/battery2-switch</property>
+						<value>1</value>
+					</equals>
+				</condition>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/electric/battery2-switch</property>
+					<value>1</value>
+				</binding>
+			</item>
+			<item>
+				<name>PFD</name>
+				<value>CHECK ON</value>
+			</item>
+			<item>
+				<name>Essential Bus Voltage</name>
+				<value>CHECK 23-25 VOLTS</value>
+				<condition>
+					<greater-than-equals>
+						<property>/systems/electrical/volts</property>
+						<value>23</value>
+					</greater-than-equals>
+				</condition>
+			</item>
+			<item>
+				<name>Flap Position Lights</name>
+				<value>CHECK OFF</value>
+			</item>
+			<item>
+				<name>BAT 1</name>
+				<value>ON</value>
+				<condition>
+					<equals>
+						<property>/controls/electric/battery1-switch</property>
+						<value>1</value>
+					</equals>
+				</condition>
+			</item>
+			<item>
+				<name>Avionics Cooling Fan</name>
+				<value>CHECK AUDIBLE</value>
+			</item>
+			<item>
+				<name>Oxygen System</name>
+				<value>CHECK CONDITION</value>
+				<value>ON</value>
+				<value>CHECK QUANTITY AND FLOW</value>
+				<value>OFF</value>
+			</item>
+			<item>
+				<name>Strobe and Navigation Lights</name>
+				<value>CHECK OPERATION</value>
+			</item>
+			<item>
+				<name>Stall Warning</name>
+				<value>CHECK MANUALLY (not yet possible)</value>
+			</item>
+			<item>
+				<name>Fuel Quantity</name>
+				<value>CHECK</value>
+			</item>
+			<item>
+				<name>Fuel Selector Valve</name>
+				<value>FULLEST TANK</value>
+			</item>
+			<item>
+				<name>Flaps</name>
+				<value>SET 100%, CHECK LIGHT ON</value>
+			</item>
+			<item>
+				<name>Oil Annunciator</name>
+				<value>CHECK OFF</value>
+			</item>
+			<item>
+				<name>BAT 1 and 2</name>
+				<value>OFF</value>
+				<condition>
+					<equals>
+						<property>/controls/electric/battery1-switch</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/controls/electric/battery2-switch</property>
+						<value>1</value>
+					</equals>
+				</condition>
+			</item>
+			<item>
+				<name>Circuit Breakers (not yet implemented)</name>
+				<value>CHECK ALL IN</value>
+			</item>
+			<item>
+				<name>Fire Extinguisher and Egress Hammer (not yet implemented)</name>
+				<value>CHECK AVAILABLE</value>
+			</item>
+			<item>
+				<name>CAPS Handle (not yet implemented)</name>
+				<value>CHECK SAFETY PIN REMOVED</value>
+			</item>
+			<item>
+				<name>Walker</name>
+				<value>Get out of the aircraft</value>
+			</item>
+		</page>
+		<page>
+			<item>
+				<name></name>
+				<value>LEFT FUSELAGE</value>
+			</item>
+			<item>
+				<name>Left Door Lock</name>
+				<value>UNLOCK</value>
+			</item>
+			<item>
+				<name>COM 1 Antenna (top of fuselage)</name>
+				<value>CHECK CONDITION AND ATTACHMENT</value>
+			</item>
+			<item>
+				<name>XPDR and COM2 Antenna (bottom of fuselage)</name>
+				<value>CHECK CONDITION AND ATTACHMENT</value>
+			</item>
+			<item>
+				<name>Wing - Fuselage fairing</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Baggage Door</name>
+				<value>CLOSED AND SECURED</value>
+			</item>
+			<item>
+				<name>Static Port (not yet implemented)</name>
+				<value>CHECK FOR BLOCKAGE</value>
+			</item>
+			<item>
+				<name>Parachute Cover</name>
+				<value>SEALED AND SECURED</value>
+			</item>
+		</page>
+		<page>
+			<item>
+				<name></name>
+				<value>EMPENNAGE</value>
+			</item>
+			<item>
+				<name>Tiedown Rope (not yet implemented)</name>
+				<value>REMOVE</value>
+			</item>
+			<item>
+				<name>Horizontal and Vertical Stabilizer</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Elevator and Tab</name>
+				<value>CHECK CONDITION AND MOVEMENT</value>
+			</item>
+			<item>
+				<name>Rudder</name>
+				<value>CHECK FREEDOM OF MOVEMENT</value>
+			</item>
+			<item>
+				<name>Rudder Trim Tab</name>
+				<value>CHECK CONDITION AND SECURE ATTACHMENT</value>
+			</item>
+			<item>
+				<name>Attachment hinges, bolts, and cotter pins</name>
+				<value>CHECK SECURE</value>
+			</item>
+		</page>
+		<page>
+			<item>
+				<name></name>
+				<value>RIGHT FUSELAGE</value>
+			</item>
+			<item>
+				<name>Static Port (not yet implemented)</name>
+				<value>CHECK FOR BLOCKAGE</value>
+			</item>
+			<item>
+				<name>Wing - Fuselage fairing</name>
+				<value>CHECK CONDITION</value>
+			</item>
+		</page>
+		<page>
+			<item>
+				<name></name>
+				<value>RIGHT WING</value>
+			</item>
+			<item>
+				<name>Flap and Rub Strips</name>
+				<value>CHECK CONDITION AND SECURITY</value>
+			</item>
+			<item>
+				<name>Aileron and Tab</name>
+				<value>CHECK CONDITION AND MOVEMENT</value>
+			</item>
+			<item>
+				<name>Aileron Gap Seal</name>
+				<value>CHECK SECURE</value>
+			</item>
+			<item>
+				<name>Hinges, Actuation Arm, Bolts and Cotter Pins</name>
+				<value>CHECK SECURE</value>
+			</item>
+			<item>
+				<name>Wingtip</name>
+				<value>CHECK ATTACHMENT</value>
+			</item>
+			<item>
+				<name>Wingtip Light and Lens (not yet implemented)</name>
+				<value>CHECK CONDITION AND SECURITY</value>
+			</item>
+			<item>
+				<name>Fuel Vent (Lower Side) (not yet implemented)</name>
+				<value>CHECK UNOBSTRUCTED</value>
+			</item>
+			<item>
+				<name>Leading Edge and Stall Strips</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Fuel Cap (not yet implemented)</name>
+				<value>CHECK QUANTITY</value>
+				<value>SECURE</value>
+			</item>
+			<item>
+				<name>Fuel Drains (2, below wing) (not yet implemented)</name>
+				<value>DRAIN AND CHECK FOR WATER CONTAMINATION</value>
+			</item>
+			<item>
+				<name></name>
+				<value>Right Gear</value>
+			</item>
+			<item>
+				<name>Wheel Fairings</name>
+				<value>CHECK SECURE</value>
+			</item>
+			<item>
+				<name>Tire</name>
+				<value>CHECK CONDITION, INFLATION AND WEAR</value>
+			</item>
+			<item>
+				<name>Wheel and Breaks</name>
+				<value>CHECK FOR FLUID LEAKS, EVIDENCE OF OVERHEATING, CONDITION AND SECURITY</value>
+			</item>
+			<item>
+				<name>Wheel Chocks and Tiedown (not yet implemented)</name>
+				<value>REMOVE</value>
+			</item>
+		</page>
+		<page>
+			<item>
+				<name></name>
+				<value>Nose</value>
+			</item>
+			<item>
+				<name>Right Vortex Generator</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Right Exhaust Pipe</name>
+				<value>CHECK CONDITION, SECURITY AND CLEARANCE</value>
+			</item>
+			<item>
+				<name></name>
+				<value>Nose Gear</value>
+			</item>
+			<item>
+				<name>Tow Bar</name>
+				<value>REMOVE</value>
+			</item>
+			<item>
+				<name>Strut</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Wheel Fairing</name>
+				<value>CHECK SECURE</value>
+			</item>
+			<item>
+				<name>Tire</name>
+				<value>CHECK CONDITION, INFLATION AND WEAR</value>
+			</item>
+			<item>
+				<name></name>
+				<value>Cowling</value>
+			</item>
+			<item>
+				<name>Cowling</name>
+				<value>CHECK ATTACHMENTS</value>
+			</item>
+			<item>
+				<name>Landing Lights</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Propeller</name>
+				<value>CHECK GROUND CLEARANCE</value>
+			</item>
+			<item>
+				<name>Spinner</name>
+				<value>CHECK CONDITION, SECURITY, LOOK FOR OIL LEAKS</value>
+			</item>
+			<item>
+				<name>Air Inlets</name>
+				<value>CHECK UNOBSTRUCTED</value>
+			</item>
+			<item>
+				<name>Alternator (not yet implemented)</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Engine Oil (not yet implemented)</name>
+				<value>CHECK QUANTITY 6-8 QUARTS</value>
+				<value>CHECK FOR LEAKS</value>
+				<value>SECURE CAP AND DOOR</value>
+			</item>
+			<item>
+				<name>External Power (not yet implemented)</name>
+				<value>CHECK DOOR SECURED</value>
+			</item>
+			<item>
+				<name>Gascolator (lower side) (not yet implemented)</name>
+				<value>DRAIN FOR 3 SECONDS, CHECK WATER CONTAMINATION</value>
+			</item>
+			<item>
+				<name>Left Vortex Generator</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Left Exhaust Pipe</name>
+				<value>CHECK CONDITION, SECURITY AND CLEARANCE</value>
+			</item>
+		</page>
+		<page>
+			<item>
+				<name></name>
+				<value>LEFT WING</value>
+			</item>
+			<item>
+				<name></name>
+				<value>Left Gear</value>
+			</item>
+			<item>
+				<name>Wheel Fairings</name>
+				<value>CHECK SECURE</value>
+			</item>
+			<item>
+				<name>Tire</name>
+				<value>CHECK CONDITION, INFLATION AND WEAR</value>
+			</item>
+			<item>
+				<name>Wheel and Breaks</name>
+				<value>CHECK FOR FLUID LEAKS, EVIDENCE OF OVERHEATING, CONDITION AND SECURITY</value>
+			</item>
+			<item>
+				<name>Wheel Chocks and Tiedown</name>
+				<value>REMOVE</value>
+			</item>
+			<item>
+				<name> </name>
+				<value> </value>
+			</item>
+			<item>
+				<name>Fuel Drains (2, below wing) (not yet implemented)</name>
+				<value>DRAIN AND CHECK FOR WATER CONTAMINATION</value>
+			</item>
+			<item>
+				<name>Fuel Cap (not yet implemented)</name>
+				<value>CHECK QUANTITY</value>
+				<value>SECURE</value>
+			</item>
+			<item>
+				<name>Leading Edge and Stall Strips</name>
+				<value>CHECK CONDITION</value>
+			</item>
+			<item>
+				<name>Fuel Vent (Lower Side)</name>
+				<value>CHECK UNOBSTRUCTED</value>
+			</item>
+			<item>
+				<name>Pitot Tube</name>
+				<value>REMOVE COVER, CHECK UNOBSTRUCTED</value>
+			</item>
+			<item>
+				<name>Wingtip</name>
+				<value>CHECK ATTACHMENT</value>
+			</item>
+			<item>
+				<name>Wingtip Light and Lens (not yet implemented)</name>
+				<value>CHECK CONDITION AND SECURITY</value>
+			</item>
+			<item>
+				<name>Hinges, Actuation Arm, Bolts and Cotter Pins</name>
+				<value>CHECK SECURE</value>
+			</item>
+			<item>
+				<name>Aileron Gap Seal</name>
+				<value>CHECK SECURE</value>
+			</item>
+			<item>
+				<name>Aileron and Tab</name>
+				<value>CONDITION AND MOVEMENT</value>
+			</item>	    
+			<item>
+				<name>Flap and Rub Strips</name>
+				<value>CONDITION AND SECURITY</value>
+			</item>
+		</page>
+	</checklist>
+	
+	<checklist>
+		<title>Before Starting Engine</title>
+		<item>
+			<name>Preflight Inspection</name>
+			<value>COMPLETE</value>
+		</item>
+		<item>
+			<name>Weight and Balance</name>
+			<value>CHECK WITHIN LIMITS</value>
+		</item>
+		<item>
+			<name>Emergency Equipment</name>
+			<value>AVAILABLE</value>
+		</item>
+		<item>
+			<name>Passenger Briefing</name>
+			<value>COMPLETE</value>
+			<value>Inform them about security procedures</value>
+		</item>
+		<item>
+			<name>Seats, Seat Belts, Shoulder Harnesses</name>
+			<value>ADJUST and LOCK</value>
+		</item>
+	</checklist>
+	
+	<checklist>
+		<title>Starting Engine</title>
+		<item>
+			<name>External Power (not yet implemented)</name>
+			<value>CONNECT if AVAILABLE</value>
+		</item>
+		<item>
+			<name>Brakes</name>
+			<value>PRESS and HOLD</value>
+			<marker>
+				<x-m>-0.3500</x-m>
+				<y-m>-0.3967</y-m>
+				<z-m>-0.2283</z-m>
+				<scale>2.0413</scale>
+			</marker>
+			<condition>
+				<greater-than>
+					<property>/controls/gear/brake-left</property>
+					<value>0.9</value>
+				</greater-than>
+				<greater-than>
+					<property>/controls/gear/brake-right</property>
+					<value>0.9</value>
+				</greater-than>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/gear/brake-left</property>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/gear/brake-right</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
+			<name>Bat Switches</name>
+			<value>BOTH ON</value>
+			<value>CHECK VOLTAGE</value>
+			<condition>
+				<equals>
+					<property>/controls/electric/battery1-switch</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/controls/electric/battery2-switch</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/electric/battery1-switch</property>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/electric/battery2-switch</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
+			<name>Strobe Lights</name>
+			<value>ON</value>
+			<condition>
+				<property>/controls/lighting/strobe-lights</property>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/lighting/strobe-lights</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
+			<name>Mixture</name>
+			<value>FULL RICH</value>
+			<condition>
+				<equals>
+					<property>/controls/engines/engine/mixture</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/engines/engine/mixture</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
+			<name>Power Lever</name>
+			<value>FULL FORWARD</value>
+			<condition>
+				<greater-than>
+					<property>/controls/engines/engine/throttle</property>
+					<value>0.95</value>
+				</greater-than>
+			</condition>
+			<binding>
+				<command>property-interpolate</command>
+				<property>/controls/engines/engine/throttle</property>
+				<value>1.0</value>
+				<rate>0.2</rate>
+			</binding>
+		</item>
+		<item>
+			<name>Fuel Pump</name>
+			<value>BOOST</value>
+			<condition>
+				<equals>
+					<property>/controls/fuel/boost-pump</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/fuel/boost-pump</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
+			<name>Propellor Area</name>
+			<value>CLEAR</value>
+		</item>
+		<item>
+			<name>Power Lever</name>
+			<value>OPEN 1/4 INCH</value>
+			<condition>
+				<greater-than>
+					<property>/controls/engines/engine/throttle</property>
+					<value>0.03</value>
+				</greater-than>
+				<less-than>
+					<property>/controls/engines/engine/throttle</property>
+					<value>0.13</value>
+				</less-than>
+			</condition>
+			<binding>
+				<command>property-interpolate</command>
+				<property>/controls/engines/engine/throttle</property>
+				<value>0.08</value>
+				<rate>0.2</rate>
+			</binding>
+		</item>
+		<item>
+			<name>Ignition Switch</name>
+			<value>START</value>
+			<value>RELEASE after engine starts</value>
+		</item>
+		<item>
+			<name>Mixture</name>
+			<value>LEAN for maximum RPM</value>
+		</item>
+		<item>
+			<name>Power Lever</name>
+			<value>MAINTAIN 1000RPM</value>
+		</item>
+		<item>
+			<name>Oil Pressure</name>
+			<value>CHECK</value>
+		</item>
+		<item>
+			<name>Alternator Master Switches</name>
+			<value>ON</value>
+			<condition>
+				<property>controls/engines/engine[0]/alt1</property>
+				<property>controls/engines/engine[0]/alt2</property>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[0]/alt1</property>
+				<value type="bool">true</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[0]/alt2</property>
+				<value type="bool">true</value>
+			</binding>
+		</item>
+		<item>
+			<name>Avionics Power Switch</name>
+			<value>ON</value>
+			<condition>
+				<property>controls/electric/avionics-switch</property>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/electric/avionics-switch</property>
+				<value type="bool">true</value>
+			</binding>
+		</item>
+		<item>
+			<name>Engine Parameters</name>
+			<value>MONITOR</value>
+		</item>
+		<item>
+			<name>External Power (not yet implemented)</name>
+			<value>DISCONNECT if connected</value>
+		</item>
+		<item>
+			<name>Amp Meter</name>
+			<value>CHECK</value>
+		</item>
+	</checklist>
+	
+	<checklist>
+		<title>Before Taxiing / Taxiing</title>
+		<page>
+			<item>
+				<name>Before Taxiing</name>
+			</item>
+			<item>
+				<name>Flaps</name>
+				<value>RETRACT</value>
+				<condition>
+					<equals>
+						<property>/controls/flight/flaps</property>
+						<value>0</value>
+					</equals>
+				</condition>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/flight/flaps</property>
+					<value>0</value>
+				</binding>
+			</item>
+			<item>
+				<name>Radios and Avionics</name>
+				<value>AS REQUIRED</value>
+			</item>
+			<item>
+				<name>Cabin Heat/Defrost (not yet implemented)</name>
+				<value>AS REQUIRED</value>
+			</item>
+			<item>
+				<name>Fuel Selector (not yet implemented)</name>
+				<value>SWITCH TANK</value>
+			</item>
+		</page>
+		<page>
+			<item>
+				<name>Taxiing</name>
+			</item>
+			<item>
+				<name>Parking Brake</name>
+				<value>RELEASE</value>
+				<condition>
+					<equals>
+						<property>/controls/gear/brake-parking</property>
+						<value>0</value>
+					</equals>
+				</condition>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/gear/brake-parking</property>
+					<value>0</value>
+				</binding>
+			</item>
+			<item>
+				<name>Brakes</name>
+				<value>CHECK</value>
+			</item>
+			<item>
+				<name>HSI Orientation, Attitude Gyro and Turn Coordinator</name>
+				<value>CHECK</value>
+			</item>
+		</page>
+	</checklist>
+	
+	<checklist>
+		<title>Before Takeoff</title>
+		<item>
+			<name>Doors</name>
+			<value>LATCHED</value>
+		</item>
+		<item>
+			<name>CAPS Handle (not yet implemented)</name>
+			<value>CHECK PIN REMOVED</value>
+		</item>
+		<item>
+			<name>Seat Belt, Shoulder Harnesses</name>
+			<value>SECURE</value>
+		</item>
+		<item>
+			<name>Air Conditioner</name>
+			<value>AS REQUIRED</value>
+			<value>MIND TAKEOFF PERFORMANCE CHANGE IF AIR CONDITIONER IS ON</value>
+		</item>
+		<item>
+			<name>Fuel Quantity</name>
+			<value>CHECK SUFFICIENT</value>
+		</item>
+		<item>
+			<name>Fuel Selector (not yet implemented)</name>
+			<value>FULLEST TANK</value>
+		</item>
+		<item>
+			<name>Fuel Pump</name>
+			<value>BOOST</value>
+			<condition>
+				<equals>
+					<property>/controls/fuel/boost-pump</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/fuel/boost-pump</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
+			<name>Mixture</name>
+			<value>FULL RICH</value>
+			<condition>
+				<equals>
+					<property>/controls/engines/engine/mixture</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/engines/engine/mixture</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
+			<name>Flaps</name>
+			<value>SET 50 percent and CHECK</value>
+			<condition>
+				<equals>
+					<property>/controls/flight/flaps</property>
+					<value>0.5</value>
+				</equals>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/flight/flaps</property>
+				<value>0.5</value>
+			</binding>
+		</item>
+		<item>
+			<name>Transponder</name>
+			<value>SET</value>
+		</item>
+		<item>
+			<name>Autopilot</name>
+			<value>CHECK</value>
+		</item>
+		<item>
+			<name>Navigation, Radios, GPS</name>
+			<value>SET</value>
+		</item>
+		<item>
+			<name>Cabin Heat/Defrost (not yet implemented)</name>
+			<value>AS REQUIRED</value>
+		</item>
+		<item>
+			<name>Brakes</name>
+			<value>PRESS and HOLD</value>
+			<marker>
+				<x-m>-0.3500</x-m>
+				<y-m>-0.3967</y-m>
+				<z-m>-0.2283</z-m>
+				<scale>2.0413</scale>
+			</marker>
+			<condition>
+				<greater-than>
+					<property>/controls/gear/brake-left</property>
+					<value>0.9</value>
+				</greater-than>
+				<greater-than>
+					<property>/controls/gear/brake-right</property>
+					<value>0.9</value>
+				</greater-than>
+			</condition>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/gear/brake-left</property>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/gear/brake-right</property>
+				<value>1</value>
+			</binding>
+		</item>
+		<item>
+			<name>Power Lever</name>
+			<value>1700 RPM</value>
+		</item>
+		<item>
+			<name>Alternator and Voltage</name>
+			<value>CHECK</value>
+		</item>
+		<item>
+			<name>Pitot Heat, Navigation lights, Landing light</name>
+			<value>AS REQUIRED</value>
+		</item>
+		<item>
+			<name>Magnetos</name>
+			<value>CHECK Left/Right</value>
+		</item>
+		<item>
+			<name>Engine Parameters</name>
+			<value>MONITOR</value>
+		</item>
+		<item>
+			<name>Power Lever</name>
+			<value>SET 1000RPM</value>
+		</item>
+		<item>
+			<name>Flight Instruments, HSI and Altimeter</name>
+			<value>CHECK</value>
+		</item>
+		<item>
+			<name>Flight Controls</name>
+			<value>FREE and CORRECT</value>
+		</item>
+		<item>
+			<name>Trim</name>
+			<value>SET FOR TAKEOFF</value>
+		</item>
+		<item>
+			<name>Autopilot</name>
+			<value>DISCONNECT</value>
+		</item>
+	</checklist>
+</PropertyList>

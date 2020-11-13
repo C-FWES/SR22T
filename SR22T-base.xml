@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--all citations referring to POH refer to http://servicecenters.cirrusdesign.com/techpubs/pdf/POH/SR22-005/pdf/Online13772-005.pdf-->
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
+	<sim include="Nasal/views.xml">
+		<systems>
+			<!--Disable generic electrical system-->
+			<electrical>
+				<path/>
+			</electrical>
+			<property-rule n="100">
+				<path>Aircraft/SR22T/Systems/pfd.xml</path>
+			</property-rule>
+			<autopilot>
+				<path>Aircraft/SR22T/Systems/it-autoflight.xml</path>
+			</autopilot>
+		</systems>
+		<instrumentation>
+			<path>Nasal/instrumentation.xml</path>
+		</instrumentation>
+		<sound>
+			<path archive="y">Sounds/sound.xml</path>
+		</sound>
+		<checklists include="SR22T-checklists.xml"/>
+		<model>
+			<path archive="y">Aircraft/SR22T/Models/SR22T.xml</path>
+			<livery>
+				<file type="string">default</file>
+			</livery>
+			<rendering>
+				<reflection-enabled type="int">1</reflection-enabled>
+				<reflection-type type="int">2</reflection-type>
+				<reflection-dynamic type="int">1</reflection-dynamic>
+				<reflection-correction type="float">0.3</reflection-correction>
+				<reflection-fresnel type="float">0.5</reflection-fresnel>
+				<reflection-fresnel-factor type="float">1.0</reflection-fresnel-factor>
+				<reflection-rainbow type="float">0.1</reflection-rainbow>
+				<reflection-noise type="float">0.05</reflection-noise>
+				<ambient-correction type="float">0.15</ambient-correction>
+			</rendering>
+		</model>
+		<flaps>
+			<setting> 0.000 </setting>
+			<setting> 0.3 </setting>
+			<setting> 1.000 </setting>
+			<!-- 20 deg -->
+		</flaps>
+		<multiplay>
+			<chat_display>1</chat_display>
+			<generic>
+				<!--INTEGERS/BOOLEANS-->
+				<!--0-5 for immatriculation-->
+				<int type="int" n="0">  0 </int>
+				<int type="int" n="1">  0 </int>
+				<int type="int" n="2">  0 </int>
+				<int type="int" n="3">  0 </int>
+				<int type="int" n="4">  0 </int>
+				<int type="int" n="5">  0 </int>
+				<!--Gear-->
+				<!--Weight on wheels-->
+				<int type="bool" n="6" alias="/gear/gear[0]/wow"> 1 </int>
+				<int type="bool" n="7" alias="/gear/gear[1]/wow"> 1 </int>
+				<int type="bool" n="8" alias="/gear/gear[2]/wow"> 1 </int>
+				<!-- Lights -->
+				<!-- Navigation Lights -->
+				<int n="9" alias="/sim/model/lights/nav-light">  0 </int>
+				<!-- Beacon -->
+				<int n="10" alias="/sim/model/lights/beacon/state">  0 </int>
+				<!-- Strobe -->
+				<int n="11" alias="/sim/model/lights/strobe/state">  0 </int>
+				<!--FLOATS-->
+				<!--Doors-->
+				<float n="0" alias="/sr22t/doors/left-pos-norm"/>
+				<float n="1" alias="/sr22t/doors/right-pos-norm"/>
+				<float n="2" alias="/sr22t/doors/baggage-pos-norm"/>
+				<!--Altitude for shadow-->
+				<float n="3" alias="/position/gear-agl-m">  0 </float>
+				<!--Gear-->
+				<!--Castering nose wheel position-->
+				<float n="4" alias="/gear/gear[0]/steering-norm">  0 </float>
+				<!--Rollspeed-->
+				<float n="5" alias="/gear/gear[0]/rollspeed-ms">  0 </float>
+				<float n="6" alias="/gear/gear[1]/rollspeed-ms">  0 </float>
+				<float n="7" alias="/gear/gear[2]/rollspeed-ms">  0 </float>
+			</generic>
+		</multiplay>
+		<help>
+			<title>Cirrus Design SR22T</title>
+			<key>
+				<name>d</name>
+				<desc>Open/Close crew canopy</desc>
+			</key>
+			<key>
+				<name>D</name>
+				<desc>Open/Close passenger door</desc>
+			</key>
+		</help>
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>Cirrus Design SR22T</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.toggle();</script>
+						</binding>
+					</item>
+					<item>
+						<label>Pushback</label>
+						<name>pushback</name>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>pushback</dialog-name>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+	<it-autoflight>
+		<config>
+			<roll>
+				<kp-low>0.05</kp-low> <!-- Kp at low speed -->
+				<kp-high>0.03</kp-high> <!-- Kp at high speed -->
+				<ti>1.5</ti>
+				<td>0.0001</td>
+			</roll>
+			<pitch>
+				<kp-low>-0.06</kp-low> <!-- Kp at low speed -->
+				<kp-high>-0.04</kp-high> <!-- Kp at high speed -->
+				<ti>1.0</ti>
+				<td>0.001</td>
+			</pitch>
+			<cmd>
+				<roll-kp>-1.3</roll-kp>
+				<vorloc>-2.0</vorloc>
+				<vs>0.0017</vs>
+			</cmd>
+		</config>
+		<settings>
+			<enable-stby>1</enable-stby> <!-- If disabled, LVL and V/S become active when AP on. -->
+			<pitch-mode>0</pitch-mode> <!-- 0 = Elevator trim only, 1 = Elevator only, 2 = Elevator and Autotrim -->
+			<auto-arm-alt>1</auto-arm-alt> <!-- Enable automatic altitude arm -->
+			<bank-limit>15</bank-limit> <!-- Set the bank limit -->
+		</settings>
+	</it-autoflight>
+	<payload>
+		<weight>
+			<name type="string">Pilot</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+			<arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Co-Pilot</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+			<arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Left Passenger</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+			<arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Center Passenger</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+			<arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Right Passenger</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+			<arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Baggage</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+			<arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">200.0</max-lb>
+			<!-- WARNING: Max baggage weight according to POH 1-8 is 130lbs! -->
+		</weight>
+		<pax-state type="int">0</pax-state>
+		<securing-state type="int">0</securing-state>
+	</payload>
+	<instrumentation>
+		<heading-indicator>
+			<heading-bug-deg type="float">0</heading-bug-deg>
+		</heading-indicator>
+		<PFD>
+			<altitude-bug type="int">0</altitude-bug>
+		</PFD>
+		<comm n="0">
+			<serviceable type="bool">1</serviceable>
+			<volume type="double">0.5</volume>
+			<display-volume type="bool">0</display-volume>
+			<power-btn type="bool">0</power-btn>
+		</comm>
+		<comm n="1">
+			<serviceable type="bool">1</serviceable>
+			<volume type="double">0.5</volume>
+			<display-volume type="bool">0</display-volume>
+			<power-btn type="bool">0</power-btn>
+		</comm>
+		<nav n="0">
+			<serviceable type="bool">1</serviceable>
+			<volume type="double">0.5</volume>
+			<audio-btn type="bool">1</audio-btn>
+			<ident type="bool">1</ident>
+			<display-volume type="bool">0</display-volume>
+			<radials>
+				<target-radial-deg type="float">0</target-radial-deg>
+			</radials>
+		</nav>
+		<nav n="1">
+			<serviceable type="bool">1</serviceable>
+			<volume type="double">0.5</volume>
+			<audio-btn type="bool">0</audio-btn>
+			<ident type="bool">0</ident>
+			<display-volume type="bool">0</display-volume>
+		</nav>
+		<altimeter n="1">
+			<serviceable type="bool">1</serviceable>
+		</altimeter>
+		<enginstr>
+			<serviceable type="bool">1</serviceable>
+		</enginstr>
+		<adc>
+			<serviceable type="bool">0</serviceable>
+		</adc>
+		<ahrs>
+			<serviceable type="bool">0</serviceable>
+		</ahrs>
+		<encoder>
+			<serviceable type="bool">0</serviceable>
+		</encoder>
+		<transponder>
+			<serviceable type="bool">0</serviceable>
+		</transponder>
+		<adf n="0">
+			<serviceable type="bool">1</serviceable>
+			<ident-audible type="bool">0</ident-audible>
+		</adf>
+		<dme n="0">
+			<serviceable type="bool">1</serviceable>
+		</dme>
+		<audio>
+			<serviceable type="bool">0</serviceable>
+		</audio>
+		<pitot-heat>
+			<serviceable type="bool">true</serviceable>
+			<active type="bool">false</active>
+		</pitot-heat>
+		<radar>
+			<serviceable type="bool">true</serviceable>
+			<range type="int" archive="y">1000</range>
+		</radar>
+	</instrumentation>
+	<controls>
+		<fuel>
+			<boost-pump type="int">0</boost-pump>	<!-- 0=OFF 1=BOOST -1=HIGH BOOST/PRIME -->
+			<tank-selector type="int">1</tank-selector>	<!-- 0=OFF (LEFT SIDE) 1=LEFT 2=RIGHT 3=OFF (RIGHT SIDE)-->
+		</fuel>
+		<lighting>
+			<nav-lights type="bool">0</nav-lights>
+			<strobe-lights type="bool">0</strobe-lights>
+			<landing-light type="bool">0</landing-light>
+		</lighting>
+		<electric>
+			<battery1-switch type="bool">0</battery1-switch>
+			<battery2-switch type="bool">0</battery2-switch>
+			<avionics-switch type="bool">0</avionics-switch>
+			<avionics-switch-pos type="double">0</avionics-switch-pos>
+		</electric>
+		<flight>
+			<elevator-trim>0.0</elevator-trim>
+			<!--<rudder-trim>0.085875</rudder-trim>-->
+			<flaps-cmd type="float">0.0</flaps-cmd>
+		</flight>
+		<engines>
+			<engine n="0">
+				<alt1 type="bool">0</alt1>
+				<alt2 type="bool">0</alt2>
+			</engine>
+			<key type="bool">false</key>
+		</engines>
+	</controls>
+	<sr22t>
+		<doors>
+			<left-input type="bool">0</left-input>
+			<right-input type="bool">0</right-input>
+			<baggage-input type="bool">0</baggage-input>
+		</doors>
+	</sr22t>
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name>Left Wing</name>
+				<selected type="bool">true</selected>
+			</tank>
+			<tank n="1">
+				<name>Right Wing</name>
+				<selected type="bool">true</selected>
+			</tank>
+			<tank n="2">
+				<name>Collector Tank</name>
+				<selected type="bool">true</selected>
+			</tank>
+		</fuel>
+	</consumables>
+	<input>
+		<keyboard include="Nasal/keyboard.xml"/>
+	</input>
+	<nasal>
+		<itaf>
+			<file>Aircraft/SR22T/Nasal/it-autoflight.nas</file>
+		</itaf>
+		<controls>
+			<file>Nasal/controls_override.nas</file>
+		</controls>
+		<sr22t>
+			<file>Nasal/light.nas</file>
+			<file>Nasal/sr22t.nas</file>
+			<file>Nasal/electrical.nas</file>
+		</sr22t>
+		<canvas_g3x>
+			<file>Aircraft/SR22T/Models/Interior/Instruments/G3X/G3X.nas</file>
+		</canvas_g3x>
+		<canvas_md302>
+			<file>Aircraft/SR22T/Models/Interior/Instruments/MD302/MD302_ai.nas</file>
+			<file>Aircraft/SR22T/Models/Interior/Instruments/MD302/MD302_alt.nas</file>
+		</canvas_md302>
+	</nasal>
+	
+</PropertyList>

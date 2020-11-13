@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PropertyList include="SR22T-base.xml">
+	<sim>
+		<description>Cirrus SR22T (JSBSim)</description>
+		<author>Benedikt Wolf (D-ECHO)</author>
+		<aircraft-version>03/2020</aircraft-version>
+		<status>alpha</status>
+		<flight-model archive="y">jsb</flight-model>
+		<aero archive="y">SR22T-jsb</aero>
+		<rating>
+			<FDM type="int">1</FDM>
+			<systems type="int">1</systems>
+			<cockpit type="int">1</cockpit>
+			<model type="int">1</model>
+		</rating>
+		<fuel-fraction>0.5</fuel-fraction>
+		
+		<previews>
+			<preview>
+				<type>cockpit</type>
+				<path>Splash/cockpit1.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/exterior1.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/exterior2.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+		</previews>
+	</sim>
+</PropertyList>

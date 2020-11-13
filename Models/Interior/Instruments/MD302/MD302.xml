@@ -1,0 +1,90 @@
+<PropertyList>
+
+<path>MD302.ac</path>
+<animation>
+	<type>pick</type>
+	<object-name>ai.screen</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>nasal</command>
+			<script>canvas_md302.showAI();</script>
+		</binding>
+	</action>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>alt.screen</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>nasal</command>
+			<script>canvas_md302.showALT();</script>
+		</binding>
+	</action>
+</animation>
+
+
+<animation>
+	<type>material</type>
+	<object-name>ai.screen</object-name>
+	<object-name>alt.screen</object-name>
+	<emission>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+		<factor-prop>/instrumentation/MD302/brightness</factor-prop>
+	</emission>
+	<ambient>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+		<factor-prop>/instrumentation/MD302/brightness</factor-prop>
+	</ambient>
+</animation>
+
+<!--Knob-->
+    <animation>
+        <type>pick</type>
+        <object-name>knob</object-name>
+        <action>
+		<button>1</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>/instrumentation/MD302/set-brightness</property>
+            </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>knob</type>
+        <object-name>knob</object-name><!--
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>-800</factor>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>-0.03</y-m>
+            <z-m>-0.0306</z-m>
+        </center>-->
+        <action>
+            <binding>
+		    <condition>
+			    <property>/instrumentation/MD302/set-brightness</property>
+		    </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/MD302/brightness</property>
+                <factor>0.05</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+    </animation>
+    
+</PropertyList>

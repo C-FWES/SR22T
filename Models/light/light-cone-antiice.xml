@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+	<path>light-cone-antiice.ac</path>
+	<nopreview/>
+
+	<effect>
+		<inherits-from>Effects/light-cone</inherits-from>
+		<object-name>Cone</object-name>
+	</effect>
+  
+	<animation>
+		<type>select</type>
+		<object-name>Cone</object-name>
+		<object-name>Cone-texture</object-name>
+		<object-name>Light</object-name>
+		<condition>
+			<property>/controls/lighting/antiicelight</property>
+		</condition>
+	</animation>
+</PropertyList>

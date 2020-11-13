@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PropertyList>
+	<path>SR22T.ac</path>
+	<nasal>
+		<load>
+			var livery_update = aircraft.livery_update.new("Aircraft/SR22T/Models/Liveries", 10);
+		</load>
+		<unload>
+			livery_update.stop();
+		</unload>
+	</nasal>
+	<effect>
+		<inherits-from>Effects/fuselage-reflect</inherits-from>
+		<!--Body-->
+		<object-name>fuselage</object-name>
+		<object-name>doorL</object-name>
+		<object-name>doorR</object-name>
+		<object-name>baggage_door</object-name>
+		<!--Tail-->
+		<object-name>fin</object-name>
+		<object-name>vstab</object-name>
+		<object-name>rudder</object-name>
+		<object-name>hstab</object-name>
+		<object-name>elevator</object-name>
+		<!--Wings-->
+		<object-name>wings</object-name>
+		<object-name>flapL</object-name>
+		<object-name>flapR</object-name>
+		<object-name>aileronL</object-name>
+		<object-name>aileronR</object-name>
+		<!--Gear-->
+		<object-name>gearstab</object-name>
+		<object-name>gearF</object-name>
+		<object-name>wheelfairingF</object-name>
+		<object-name>wheelfairingL</object-name>
+		<object-name>wheelfairingR</object-name>
+		<object-name>wheelF</object-name>
+		<object-name>wheelL</object-name>
+		<object-name>wheelR</object-name>
+		<!--Engine-->
+		<object-name>spinner</object-name>
+		<object-name>spinner_fast</object-name>
+		<object-name>prop1</object-name>
+		<object-name>prop2</object-name>
+		<object-name>prop3</object-name>
+	</effect>
+	<animation>
+		<type>material</type>
+		<!--Body-->
+		<object-name>fuselage</object-name>
+		<object-name>doorL</object-name>
+		<object-name>doorR</object-name>
+		<object-name>baggage_door</object-name>
+		<!--Tail-->
+		<object-name>fin</object-name>
+		<object-name>vstab</object-name>
+		<object-name>rudder</object-name>
+		<object-name>hstab</object-name>
+		<object-name>elevator</object-name>
+		<!--Wings-->
+		<object-name>wings</object-name>
+		<object-name>flapL</object-name>
+		<object-name>flapR</object-name>
+		<object-name>aileronL</object-name>
+		<object-name>aileronR</object-name>
+		<!--Gear-->
+		<object-name>gearstab</object-name>
+		<object-name>gearF</object-name>
+		<object-name>wheelfairingF</object-name>
+		<object-name>wheelfairingL</object-name>
+		<object-name>wheelfairingR</object-name>
+		<object-name>wheelF</object-name>
+		<object-name>wheelL</object-name>
+		<object-name>wheelR</object-name>
+		<!--Engine-->
+		<object-name>prop1</object-name>
+		<object-name>prop2</object-name>
+		<object-name>prop3</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>texture.png</texture>
+	</animation>
+	<effect>
+		<inherits-from>Aircraft/SR22T/Models/Effects/chrome</inherits-from>
+		<object-name>spinner</object-name>
+		<object-name>spinner_fast</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>windows</object-name>
+		<object-name>windowL</object-name>
+		<object-name>windowR</object-name>
+		<object-name>propblur</object-name>
+		<object-name>propdisc</object-name>
+	</effect>
+	<animation>
+		<type>noshadow</type>
+		<object-name>windows</object-name>
+		<object-name>windowL</object-name>
+		<object-name>windowR</object-name>
+		<object-name>propblur</object-name>
+		<object-name>propdisc</object-name>
+	</animation>
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Aircraft/SR22T/Models/chrome.rgb</texture>
+		<object-name>spinner</object-name>
+	</animation>
+	<!-- Cranking effects -->
+	<model>
+		<path>Effects/cranking/cranking.xml</path>
+		<offsets>
+			<x-m> -2.23026 </x-m>
+			<y-m> -0.1949 </y-m>
+			<z-m>  -0.75 </z-m>
+			<pitch-deg>30</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Effects/cranking/cranking.xml</path>
+		<offsets>
+			<x-m> -2.23026 </x-m>
+			<y-m> 0.1949 </y-m>
+			<z-m>  -0.75 </z-m>
+			<pitch-deg>30</pitch-deg>
+		</offsets>
+	</model>
+	<!-- Interior -->
+	<model>
+		<path>Interior/interior.xml</path>
+	</model>
+	<!-- Propeller -->
+	<animation>
+		<name>prop_complete</name>
+		<object-name>spinner</object-name>
+		<object-name>prop1</object-name>
+		<object-name>prop2</object-name>
+		<object-name>prop3</object-name>
+		<object-name>propblur</object-name>
+		<object-name>propdisc</object-name>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>propdisc</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[0]/rpm</property>
+				<value>1300</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>propblur</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[0]/rpm</property>
+					<value>500.000</value>
+				</greater-than>
+				<less-than-equals>
+					<property>engines/engine[0]/rpm</property>
+					<value>1300</value>
+				</less-than-equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>spinner_fast</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[0]/rpm</property>
+				<value>500.000</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>spinner</object-name>
+		<condition>
+			<less-than-equals>
+				<property>engines/engine[0]/rpm</property>
+				<value>500.000</value>
+			</less-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>prop1</object-name>
+		<object-name>prop2</object-name>
+		<object-name>prop3</object-name>
+		<condition>
+			<less-than>
+				<property>engines/engine[0]/rpm</property>
+				<value>900</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>spin</type>
+		<object-name>prop_complete</object-name>
+		<property>engines/engine[0]/rpm</property>
+		<condition>
+			<greater-than>
+				<property>engines/engine[0]/rpm</property>
+				<value>5</value>
+			</greater-than>
+		</condition>
+		<factor> 1 </factor>
+		<center>
+			<x-m> -3.5192 </x-m>
+			<y-m> 0.0</y-m>
+			<z-m> -0.09161 </z-m>
+		</center>
+		<axis>
+			<x> -1 </x>
+			<y>  0 </y>
+			<z>  0 </z>
+		</axis>
+	</animation>
+	<!--FLIGHT CONTROL SURFACES-->
+	<!-- Ailerons -->
+	<animation>
+		<type>rotate</type>
+		<object-name>aileronL</object-name>
+		<property>surface-positions/left-aileron-pos-norm</property>
+		<interpolation>
+			<entry>
+				<ind> -0.75 </ind>
+				<dep> 15.0 </dep>
+			</entry>
+			<entry>
+				<ind>  0.00 </ind>
+				<dep>   0.0 </dep>
+			</entry>
+			<entry>
+				<ind>  0.75 </ind>
+				<dep>  -15.0 </dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m> -0.73789 </x1-m>
+			<y1-m> -3.56641 </y1-m>
+			<z1-m> -0.30404  </z1-m>
+			<x2-m> -0.84146 </x2-m>
+			<y2-m>-4.96241 </y2-m>
+			<z2-m> -0.20941  </z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>aileronR</object-name>
+		<property>surface-positions/right-aileron-pos-norm</property>
+		<interpolation>
+			<entry>
+				<ind> -0.75 </ind>
+				<dep> 15.0 </dep>
+			</entry>
+			<entry>
+				<ind>  0.00 </ind>
+				<dep>   0.0 </dep>
+			</entry>
+			<entry>
+				<ind>  0.75 </ind>
+				<dep>  -15.0 </dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m> -0.73789 </x1-m>
+			<y1-m> 3.56641 </y1-m>
+			<z1-m> -0.30404  </z1-m>
+			<x2-m> -0.84146 </x2-m>
+			<y2-m>4.96241 </y2-m>
+			<z2-m> -0.20941  </z2-m>
+		</axis>
+	</animation>
+	<!-- Flaps POH 7-25 -->
+	<animation>
+		<type>rotate</type>
+		<object-name>flapL</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor> -35.5 </factor>
+		<axis>
+			<x1-m> -0.44722 </x1-m>
+			<y1-m>-0.9</y1-m>
+			<z1-m>-0.4  </z1-m>
+			<x2-m> -0.67272 </x2-m>
+			<y2-m> -3.52606 </y2-m>
+			<z2-m> -0.2  </z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>flapR</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor> 35.5 </factor>
+		<axis>
+			<x1-m> -0.44722 </x1-m>
+			<y1-m>0.9</y1-m>
+			<z1-m>-0.4  </z1-m>
+			<x2-m> -0.67272 </x2-m>
+			<y2-m> 3.52606 </y2-m>
+			<z2-m> -0.2  </z2-m>
+		</axis>
+	</animation>
+	<!-- Rudder -->
+	<animation>
+		<type>rotate</type>
+		<object-name>rudder</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor> 15 </factor>
+		<axis>
+			<x1-m> 3.20798 </x1-m>
+			<y1-m> 0.000 </y1-m>
+			<z1-m> -0.09196 </z1-m>
+			<x2-m> 3.68079 </x2-m>
+			<y2-m> 0.000 </y2-m>
+			<z2-m> 1.41129 </z2-m>
+		</axis>
+	</animation>
+	<!-- Elevator -->
+	<animation>
+		<type>rotate</type>
+		<object-name>elevator</object-name>
+		<property>surface-positions/elevator-pos-norm</property>
+		<factor> 20 </factor>
+		<center>
+			<x-m> 3.0114 </x-m>
+			<y-m> 0.000 </y-m>
+			<z-m> 0.05543 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<!--GEAR-->
+	<!-- Compression -->
+	<animation>
+		<type>rotate</type>
+		<object-name>wheelF</object-name>
+		<object-name>wheelfairingF</object-name>
+		<object-name>gearstabF</object-name>
+		<object-name>gearfairingF</object-name>
+		<object-name>tug</object-name>
+		<property>gear/gear[0]/compression-norm</property>
+		<interpolation>
+			<entry>
+				<ind> 0 </ind>
+				<dep>  0.0 </dep>
+			</entry>
+			<entry>
+				<ind> 1 </ind>
+				<dep> 30 </dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-2.74132 </x-m>
+			<y-m> 0.000 </y-m>
+			<z-m>-0.51922</z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wheelF</object-name>
+		<object-name>wheelfairingF</object-name>
+		<object-name>tug</object-name>
+		<property>gear/gear[0]/compression-norm</property>
+		<interpolation>
+			<entry>
+				<ind> 0 </ind>
+				<dep> 0 </dep>
+			</entry>
+			<entry>
+				<ind> 1 </ind>
+				<dep> 30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-3.23892 </x-m>
+			<y-m> 0.000 </y-m>
+			<z-m>-1.01864</z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> -1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wheelL</object-name>
+		<object-name>wheelfairingL</object-name>
+		<property>gear/gear[1]/compression-norm</property>
+		<interpolation>
+			<entry>
+				<ind> 0 </ind>
+				<dep> -10 </dep>
+			</entry>
+			<entry>
+				<ind> 1 </ind>
+				<dep>25</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<y-m>-0.980671</y-m>
+			<z-m>-0.601707</z-m>
+		</center>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wheelR</object-name>
+		<object-name>wheelfairingR</object-name>
+		<property>gear/gear[2]/compression-norm</property>
+		<interpolation>
+			<entry>
+				<ind> 0 </ind>
+				<dep> -10 </dep>
+			</entry>
+			<entry>
+				<ind> 1 </ind>
+				<dep>25</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<y-m> 0.980671</y-m>
+			<z-m>-0.601707</z-m>
+		</center>
+		<axis>
+			<x> 1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+	<!-- Rotate nose wheel (castering) -->
+	<animation>
+		<type>rotate</type>
+		<object-name>wheelF</object-name>
+		<object-name>wheelfairingF</object-name>
+		<object-name>tug</object-name>
+		<property>gear/gear[0]/steering-norm</property>
+		<factor> -360 </factor>
+		<axis>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-3.23908</x-m>
+			<y-m>0</y-m>
+		</center>
+	</animation>
+	<!-- Spin Wheels -->
+	<animation>
+		<type>spin</type>
+		<object-name>wheelF</object-name>
+		<property>gear/gear[0]/rollspeed-ms</property>
+		<factor> 30 </factor>
+		<center>
+			<x-m>-3.00529</x-m>
+			<z-m>-1.18911</z-m>
+		</center>
+		<axis>
+			<x>  0 </x>
+			<y> -1 </y>
+			<z>  0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>spin</type>
+		<object-name>wheelL</object-name>
+		<property>gear/gear[1]/rollspeed-ms</property>
+		<factor> 30 </factor>
+		<center>
+			<x-m>-0.9487</x-m>
+			<z-m>-1.17368</z-m>
+		</center>
+		<axis>
+			<x>  0 </x>
+			<y> -1 </y>
+			<z>  0 </z>
+		</axis>
+	</animation>
+	<animation>
+		<type>spin</type>
+		<object-name>wheelR</object-name>
+		<property>gear/gear[2]/rollspeed-ms</property>
+		<factor> 30 </factor>
+		<center>
+			<x-m>-0.9487</x-m>
+			<z-m>-1.17368</z-m>
+		</center>
+		<axis>
+			<x>  0 </x>
+			<y> -1 </y>
+			<z>  0 </z>
+		</axis>
+	</animation>
+	
+	<!--DOOR ANIMATION-->
+	<animation>
+		<type>pick</type>
+		<object-name>doorL</object-name>
+		<object-name>doorLint</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>sr22t/doors/left-input</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorL</object-name>
+		<object-name>doorLint</object-name>
+		<object-name>windowL</object-name>
+		<object-name>intwindowL</object-name>
+		<property>sr22t/doors/left-pos-norm</property>
+		<factor> -68 </factor>
+		<axis>
+			<x1-m> -1.8084 </x1-m>
+			<y1-m> -0.61146 </y1-m>
+			<z1-m> 0.09219  </z1-m>
+			<x2-m> -1.53705 </x2-m>
+			<y2-m>-0.20754 </y2-m>
+			<z2-m> 0.7069  </z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>doorR</object-name>
+		<object-name>doorRint</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>sr22t/doors/right-input</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorR</object-name>
+		<object-name>doorRint</object-name>
+		<object-name>windowR</object-name>
+		<object-name>intwindowR</object-name>
+		<property>sr22t/doors/right-pos-norm</property>
+		<factor> 68 </factor>
+		<axis>
+			<x1-m> -1.8084 </x1-m>
+			<y1-m> 0.61146 </y1-m>
+			<z1-m> 0.09219  </z1-m>
+			<x2-m> -1.53705 </x2-m>
+			<y2-m>0.20754 </y2-m>
+			<z2-m> 0.7069  </z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>baggage_door</object-name>
+		<object-name>baggage_door_int</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>sr22t/doors/baggage-input</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>baggage_door</object-name>
+		<object-name>baggage_door_int</object-name>
+		<property>sr22t/doors/baggage-pos-norm</property>
+		<factor> 90 </factor>
+		<center>
+			<x-m> 0.04558 </x-m>
+			<y-m> -0.56425</y-m>
+			<z-m> -0.16481 </z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y>  0 </y>
+			<z>  -1 </z>
+		</axis>
+	</animation>
+	
+	<!--LIGHTS-->
+	<!--NAV Lights-->
+	<model>
+		<name>nav-light-left</name>
+		<path>light/RedLight.xml</path>
+		<offsets>
+			<x-m> -1.2354 </x-m>
+			<y-m> -5.70236 </y-m>
+			<z-m>  -0.11745</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>nav-light-left-als</name>
+		<path>Aircraft/SR22T/Models/Effects/Lights/red-navlight.xml</path>
+		<offsets>
+			<x-m> -1.2354 </x-m>
+			<y-m> -5.70236 </y-m>
+			<z-m>  -0.11745</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>nav-light-right</name>
+		<path>light/GreenLight.xml</path>
+		<offsets>
+			<x-m> -1.2354 </x-m>
+			<y-m> 5.70236 </y-m>
+			<z-m>  -0.11745</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>nav-light-right-als</name>
+		<path>Aircraft/SR22T/Models/Effects/Lights/green-navlight.xml</path>
+		<offsets>
+			<x-m> -1.2354 </x-m>
+			<y-m> 5.70236 </y-m>
+			<z-m>  -0.11745</z-m>
+		</offsets>
+	</model>
+	<!--Anticollision Strobes-->
+	<!--Wing Strobes-->
+	<model>
+		<name>strobe-light-left</name>
+		<path>light/LeftStrobeWhite.xml</path>
+		<offsets>
+			<x-m> -1.1726 </x-m>
+			<y-m> -5.7147 </y-m>
+			<z-m> -0.10818</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>strobe-light-left2</name>
+		<path>light/LeftStrobeWhite.xml</path>
+		<offsets>
+			<x-m> -0.67324</x-m>
+			<y-m> -5.75515 </y-m>
+			<z-m> -0.08453</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>strobe-light-left-als</name>
+		<path>Aircraft/SR22T/Models/Effects/Lights/left-strobe.xml</path>
+		<offsets>
+			<x-m> -1.1726 </x-m>
+			<y-m> -5.7147 </y-m>
+			<z-m> -0.10818</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>strobe-light-left2-als</name>
+		<path>Aircraft/SR22T/Models/Effects/Lights/left-strobe2.xml</path>
+		<offsets>
+			<x-m> -0.67324</x-m>
+			<y-m> -5.75515 </y-m>
+			<z-m> -0.08453</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>strobe-light-right</name>
+		<path>light/LeftStrobeWhite.xml</path>
+		<offsets>
+			<x-m> -1.1726 </x-m>
+			<y-m> 5.7147 </y-m>
+			<z-m> -0.10818</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>strobe-light-right2</name>
+		<path>light/LeftStrobeWhite.xml</path>
+		<offsets>
+			<x-m> -0.67324</x-m>
+			<y-m> 5.75515 </y-m>
+			<z-m> -0.08453</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>strobe-light-right-als</name>
+		<path>Aircraft/SR22T/Models/Effects/Lights/right-strobe.xml</path>
+		<offsets>
+			<x-m> -1.1726 </x-m>
+			<y-m> 5.7147 </y-m>
+			<z-m> -0.10818</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>strobe-light-right2-als</name>
+		<path>Aircraft/SR22T/Models/Effects/Lights/right-strobe2.xml</path>
+		<offsets>
+			<x-m> -0.67324</x-m>
+			<y-m> 5.75515 </y-m>
+			<z-m> -0.08453</z-m>
+		</offsets>
+	</model>
+	
+        <!-- Landing Light-->
+	<model>
+		<name>landing-light</name>
+		<path>Aircraft/SR22T/Models/light/landing.xml</path>
+		<offsets>
+                            <x-m>-3.2839</x-m>
+                            <y-m>0.0</y-m>
+                            <z-m>-0.43236</z-m>
+		</offsets>
+	</model>
+	
+	<!--Select Animation-->
+	<!-- ================================================================== -->
+	<!-- ALS Lighting                                                       -->
+	<!-- ================================================================== -->
+	<animation>
+		<type>select</type>
+		<object-name>nav-light-left-als</object-name>
+		<object-name>nav-light-right-als</object-name>
+		<object-name>strobe-light-left-als</object-name>
+		<object-name>strobe-light-right-als</object-name>
+		<object-name>strobe-light-left2-als</object-name>
+		<object-name>strobe-light-right2-als</object-name>
+		<nopreview/>
+		<condition>
+			<property>/sim/rendering/shaders/skydome</property>
+		</condition>
+	</animation>
+	<!-- ================================================================== -->
+	<!-- Basic And Rembrandt Lighting                                       -->
+	<!-- ================================================================== -->
+	<animation>
+		<type>select</type>
+		<object-name>nav-light-left</object-name>
+		<object-name>nav-light-right</object-name>
+		<object-name>strobe-light-left</object-name>
+		<object-name>strobe-light-right</object-name>
+		<object-name>strobe-light-left2</object-name>
+		<object-name>strobe-light-right2</object-name>
+		<nopreview/>
+		<condition>
+			<not>
+				<property>/sim/rendering/shaders/skydome</property>
+			</not>
+		</condition>
+	</animation>
+	<model>
+		<name>tug</name>
+		<path>Tug/tug.xml</path>
+		<offsets>
+			<x-m>-3.00529</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.18911</z-m>
+			<pitch-deg>3.5</pitch-deg>
+		</offsets>
+	</model>
+</PropertyList>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>  
+
+<!--Cirrus aircraft don't have a propeller lever, instead propeller RPM is set by throttle (power) lever through some mechanism 
+	source:		https://www.youtube.com/watch?v=9nzwhg6obM8
+	
+	we control propeller RPM through controls/engines/engine[0]/propeller-pitch, 0 = ~1800 RPM (min rpm set in prop file), 1 = ~2700 (max rpm set in prop/engine file), between linearly increasing
+	
+	-->
+
+<system name="propeller"> 
+	
+	<channel name="PROP_rpm">
+		 <fcs_function name="propeller/set-prop-rpm">
+			<function>
+				<product>
+					<difference>
+						<table>
+							<independentVar>/controls/engines/engine[0]/throttle</independentVar> <!-- get throttle/power lever position-->
+							<tableData> <!-- RPM according to power lever position -->               
+								0      1800 <!--idle-->             
+								0.1      1800           
+								0.45      2500       
+								0.85      2500     
+								1      2700     
+							</tableData>
+						</table>
+						<value>1800</value><!--substract idle RPM as it resembles the 0-point-->
+					</difference>
+					<value>0.00111111</value> <!--1/(2700-1800)-->
+				</product>            
+			</function>
+			<output>/controls/engines/engine/propeller-pitch</output>   
+		</fcs_function> 
+	</channel>
+</system>

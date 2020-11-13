@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>general_pilot.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>pilot</object-name>
+    <object-name>copilot</object-name>
+    <object-name>passengerRL</object-name>
+    <object-name>passengerRR</object-name>
+  </animation>
+
+  <!-- Visière invisible depuis le cockpit -->
+  <animation>
+    <type>select</type>
+    <object-name>pilot</object-name>
+    <condition>
+      <greater-than>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+      </greater-than>
+      <property>sim/model/pilot-present</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>copilot</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/current-view/view-number</property>
+        <value>8</value>
+      </not-equals>
+      <property>sim/model/copilot-present</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>passengerRL</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/current-view/view-number</property>
+        <value>9</value>
+      </not-equals>
+      <property>sim/model/passengerL-present</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>passengerRR</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/current-view/view-number</property>
+        <value>10</value>
+      </not-equals>
+      <property>sim/model/passengerR-present</property>
+    </condition>
+  </animation>
+
+</PropertyList>

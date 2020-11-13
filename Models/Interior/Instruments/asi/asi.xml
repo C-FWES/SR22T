@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>asi.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.07 </red>
+      <green> 0.04 </green>
+      <blue>  0.04 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+     <entry><ind>   0 </ind><dep>   0 </dep></entry>
+     <entry><ind>  30 </ind><dep>  10 </dep></entry>
+     <entry><ind>  50 </ind><dep>  45 </dep></entry>
+     <entry><ind>  70 </ind><dep>  90 </dep></entry>
+     <entry><ind>  90 </ind><dep> 140 </dep></entry>
+     <entry><ind> 110 </ind><dep> 190 </dep></entry>
+     <entry><ind> 130 </ind><dep> 240 </dep></entry>
+     <entry><ind> 135 </ind><dep> 290 </dep></entry>
+     <entry><ind> 170 </ind><dep> 335 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

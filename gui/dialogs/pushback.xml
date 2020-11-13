@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!--  overwrite pushback dialog  -->
+<PropertyList>
+	
+	<name>pushback</name>
+	<layout>vbox</layout>
+	
+	<nasal>
+		<open>
+			props.globals.getNode("/sim/model/pushback/enabled", 1 ).setBoolValue(1);
+			props.globals.initNode("/sim/model/pushback/target-speed-fps", 0.0  );
+		</open>
+		<close>
+			setprop("/sim/model/pushback/enabled", 0 );
+			setprop("/sim/model/pushback/target-speed-fps", 0 );
+			setprop("/sim/model/pushback/force", 0);
+		</close>
+	</nasal>
+	
+	<group>
+		<layout>hbox</layout>
+		<text>
+			<label>Pushback</label>
+		</text>
+		
+		<empty>
+			<stretch>true</stretch>
+		</empty>
+		
+		<button>
+			<legend/>
+			<key>Esc</key>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<border>2</border>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+	
+	<hrule/>
+	
+	<group>
+		<stretch>true</stretch>
+		<layout>vbox</layout>
+		<halign>center</halign>
+		<valign>top</valign>
+		
+		<checkbox>
+			<halign>left</halign>
+			<label>Connect tug</label>
+			<property>/fdm/jsbsim/systems/pushback/connect</property>
+			<binding>
+				<command>property-toggle</command>
+				<property>/fdm/jsbsim/systems/pushback/connect</property>
+			</binding>
+		</checkbox>
+		
+		<group>
+			<layout>hbox</layout>
+			
+			<text>
+				<label>Set Power:</label>
+			</text>
+			
+			<slider>
+				<pref-width>200</pref-width>
+				<row>0</row>
+				<col>2</col>
+				<min>-500</min>
+				<max>500</max>
+				<property>/fdm/jsbsim/systems/pushback/target-power-watts</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</slider>
+			
+			<button>
+				<legend>0</legend>
+				<pref-width>16</pref-width>
+				<pref-height>16</pref-height>
+				<border>2</border>
+				<binding>
+					<command>property-assign</command>
+					<property>/fdm/jsbsim/systems/pushback/target-power-watts</property>
+					<value>0</value>
+				</binding>
+			</button>
+			
+			<text>
+				<pref-width>16</pref-width>
+				<property>/fdm/jsbsim/systems/pushback/target-power-watts</property>
+				<format>%3d</format>
+				<live>true</live>
+			</text>
+			
+			<text>
+				<label>W</label>
+			</text>
+			
+		</group>
+	</group>
+</PropertyList> 

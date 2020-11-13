@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- This fictional tug is inspired by the TowFlexx TF-2 https://towflexx.de/flugzeugschlepper/tf2-bis-4000kg-mtow/ -->
+<PropertyList>
+	<path>tug.ac</path>
+	<animation>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>fdm/jsbsim/systems/pushback/linked</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<property>sim/model/pushback/pitch-deg</property>
+		<axis>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>spin</type>
+		<object-name>wheels</object-name>
+		<property>gear/gear[0]/rollspeed-ms</property>
+		<factor>-10</factor>
+		<axis>
+			<y>1</y>
+		</axis>
+		<center>
+			<x-m>-0.710788</x-m>
+			<z-m>0.001795</z-m>
+		</center>
+	</animation>
+</PropertyList>

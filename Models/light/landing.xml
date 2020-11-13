@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>strobe.ac</path>
+
+	<!-- EXTRA MODELS -->
+	<!-- 3d light cone -->
+	<!--<model>
+		<name>Cone</name>
+		<path>Aircraft/717/Models/Lights/light-cone.xml</path>
+	</model>-->
+
+	<!-- ANIMATIONS -->
+	<!-- On/off -->
+	<animation>
+		<name>On/off</name>
+		<type>select</type>
+		<object-name>Light</object-name>
+		<object-name>Cone</object-name>
+		<condition>
+			<and>
+				<property>systems/electrical/outputs/landing-lights</property>
+			</and>
+		</condition>
+	</animation>
+<!--	<animation>
+		<name>Cone on/off</name>
+		<type>select</type>
+		<object-name>Cone</object-name>
+		<condition>
+			<property>controls/lighting/cones</property>
+		</condition>
+	</animation>-->
+
+	<animation>
+		<type>flash</type>
+		<object-name>Light</object-name>
+		<power>5</power>
+		<factor>2</factor>
+		<min>0.2</min>
+		<max>7</max>
+		<two-sides type="bool">false</two-sides>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!-- Rotate and scale the light -->
+	<animation>
+		<name>Rotate light</name>
+		<type>rotate</type>
+		<object-name>Light</object-name>
+		<offset-deg>90</offset-deg>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Scale light</name>
+		<type>scale</type>
+		<object-name>Light</object-name>
+		<x-offset>0.1</x-offset>
+		<y-offset>0.1</y-offset>
+		<z-offset>0.1</z-offset>
+	</animation>
+
+	<effect>
+		<name>REMBRANDT transparency</name>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Light</object-name>
+	</effect>
+
+</PropertyList>

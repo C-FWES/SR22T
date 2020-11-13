@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # February 2017 : Adapted for C4 by D-ECHO
+ # April 2012 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+<PropertyList>
+
+  <path>switches.ac</path>
+
+  <animation>
+    <type>range</type>
+    <min-m>  0 </min-m>
+    <max-m> 45 </max-m>
+  </animation>
+
+  <animation>
+    <object-name>avionicsswitch</object-name>
+    <object-name>batteryswitch</object-name>
+    <object-name>alternatorswitch</object-name>
+    <object-name>switchbase</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>avionicsswitch</object-name>
+    <object-name>batteryswitch</object-name>
+    <object-name>alternatorswitch</object-name>
+    <object-name>switchbase</object-name>
+    <condition>
+      <not><property>/sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <emission>
+      <red>   0.01 </red>
+      <green> 0.01 </green>
+      <blue>  0.01 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>avionicsswitch</object-name>
+    <object-name>batteryswitch</object-name>
+    <object-name>alternatorswitch</object-name>
+    <object-name>switchbase</object-name>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <emission>
+      <red>   0.003 </red>
+      <green> 0.003 </green>
+      <blue>  0.003 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>avionicsswitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/avionics-master</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>avionicsswitch</object-name>
+    <property>controls/switches/avionic-switch-pos</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> 0.00841 </x-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>batteryswitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/battery-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>batteryswitch</object-name>
+    <property>controls/electric/battery-switch-pos</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> 0.00841 </x-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>alternatorswitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/master-alt</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>alternatorswitch</object-name>
+    <property>controls/electric/alternator-switch-pos</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> 0.00841 </x-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>fuelpumpswitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank/boost-pump</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fuelpumpswitch</object-name>
+    <property>/controls/fuel/tank/boost-pump-pos</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> 0.00841 </x-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>strobeswitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/strobe-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>strobeswitch</object-name>
+        <property>controls/lighting/strobe-lights-pos</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> 0.00841 </x-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>navswitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/nav-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>navswitch</object-name>
+        <property>controls/lighting/nav-lights-pos</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> 0.00841 </x-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>landingswitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/landing-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>landingswitch</object-name>
+        <property>controls/lighting/landing-lights-pos</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> 0.00841 </x-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>brakepswitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/brake-parking</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>brakepswitch</object-name>
+        <property>controls/gear/brake-parking-pos</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> 0.00841 </x-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+
+</PropertyList>

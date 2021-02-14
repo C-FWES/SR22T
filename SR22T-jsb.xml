@@ -117,11 +117,16 @@
 				<y>   0.00 </y>
 				<z> -1.36 </z>
 			</location>
-			<static_friction>  2.5 </static_friction>
+			<!-- <static_friction>  1.5 </static_friction>
 			<dynamic_friction> 0.60 </dynamic_friction>
-			<rolling_friction> 0.02 </rolling_friction>
+			<rolling_friction> 0.02 </rolling_friction> -->
+			<static_friction> 2.8 </static_friction>
+            <dynamic_friction> 0.5 </dynamic_friction>
+            <rolling_friction> 0.02 </rolling_friction>
 			<spring_coeff unit="LBS/FT">       6080.23 </spring_coeff>
 			<damping_coeff unit="LBS/FT/SEC">   540.11 </damping_coeff>
+						<!-- <spring_coeff unit="LBS/FT">       3600 </spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">   1200 </damping_coeff> -->
 			<max_steer unit="DEG"> 30 </max_steer>
 			<brake_group>NONE</brake_group>
 			<retractable>0</retractable>

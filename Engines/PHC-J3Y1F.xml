@@ -21,7 +21,7 @@ see https://www2.lba.de/data/bb/Propeller/E_P_187_IM__V05.pdf
 	<ixx>   3.88 </ixx>
 	<diameter unit="IN">  78.0 </diameter>
 	<numblades> 3 </numblades>
-	<gearratio>  1 </gearratio>
+	<gearratio>  0.96 </gearratio>
 	<cp_factor> 0.56 </cp_factor>
 	<ct_factor> 1.00 </ct_factor>
 	<minpitch> 7 </minpitch>

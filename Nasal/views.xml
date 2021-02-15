@@ -70,10 +70,10 @@
     <internal archive="y">true</internal>
     <config>
        <x-offset-m archive="y"> -0.27 </x-offset-m>	
-       <y-offset-m archive="y">  0.51 </y-offset-m>	
+       <y-offset-m archive="y">  0.55 </y-offset-m>	
        <z-offset-m archive="y"> -1.09 </z-offset-m>	
-       <pitch-offset-deg> -7 </pitch-offset-deg>
- <!--  <default-field-of-view-deg> 75 </default-field-of-view-deg> -->
+       <pitch-offset-deg> -11 </pitch-offset-deg>
+       <default-field-of-view-deg> 58 </default-field-of-view-deg>
     </config>
   </view>
   

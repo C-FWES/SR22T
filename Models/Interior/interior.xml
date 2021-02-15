@@ -1,87 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <PropertyList>
 	<path>interior.ac</path>
-	<!--Sticks-->
-	<animation>
-		<type>rotate</type>
-		<object-name>stickL</object-name>
-		<object-name>trimLbutton</object-name>
-		<object-name>stickLbutton</object-name>
-		<object-name>stickLaxis</object-name>
-		<property>controls/flight/aileron</property>
-		<factor>60</factor>
-		<center>
-			<x-m> -1.932 </x-m>
-			<z-m> -0.032 </z-m>
-			<y-m> 0.520 </y-m>
-		</center>
-		<axis>
-			<x> -1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>	
-	</animation>	
-
-	<animation>
-		<type>rotate</type>
-		<object-name>stickR</object-name>
-		<object-name>trimRbutton</object-name>
-		<object-name>stickRbutton</object-name>
-		<object-name>stickRaxis</object-name>
-		<property>controls/flight/aileron</property>
-		<factor>60</factor>
-		<center>
-			<x-m> -1.932 </x-m>
-			<z-m> -0.032 </z-m>
-			<y-m> -0.520 </y-m>
-		</center>
-		<axis>
-			<x> -1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>	
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>stickL</object-name>
-		<object-name>trimLbutton</object-name>
-		<object-name>stickLbutton</object-name>
-		<object-name>stickLaxis</object-name>
-		<property>controls/flight/elevator</property>
-		<factor>0.05</factor>
-		<!-- <center>
-			<x-m> -1.932 </x-m>
-			<z-m> -0.032 </z-m>
-			<y-m> 0.520 </y-m>
-		</center> -->
-		<axis>
-			<x> -1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>	
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>stickR</object-name>
-		<object-name>trimRbutton</object-name>
-		<object-name>stickRbutton</object-name>
-		<object-name>stickRaxis</object-name>
-		<property>controls/flight/elevator</property>
-		<factor>0.05</factor>
-		<!-- <center>
-			<x-m> -1.932 </x-m>
-			<z-m> -0.032 </z-m>
-			<y-m> 0.520 </y-m>
-		</center> -->
-		<axis>
-			<x> -1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>	
-	</animation>
-
 	<animation>
 		<object-name>interior</object-name>
 		<object-name>shell</object-name>
@@ -110,7 +29,7 @@
 		<object-name>seatFR</object-name>
 		<object-name>seatsR</object-name>
 	</effect>
-	<!--Switches-->
+	<!--Switches -->
 	<animation>
 		<type>pick</type>
 		<visible>true</visible>
@@ -399,7 +318,7 @@
 			<z> 0 </z>
 		</axis>
 	</animation>
-	<!--IGNITION KEY-->
+	<!--IGNITION KEY -->
 	<animation>
 		<type>pick</type>
 		<object-name>ignition_bg</object-name>
@@ -460,19 +379,6 @@
 				<max>3</max>
 			</binding>
 		</action>
-		<!--
-        <increase>
-            <binding>
-                <command>nasal</command>
-                <script>c172p.click("magneto-forward")</script>
-            </binding>
-        </increase>
-        <decrease>
-            <binding>
-                <command>nasal</command>
-                <script>c172p.click("magneto-back")</script>
-            </binding>
-        </decrease>-->
 		<hovered>
 			<binding>
 				<command>set-tooltip</command>
@@ -481,12 +387,12 @@
 				<property>controls/engines/engine/magnetos</property>
 				<mapping>nasal</mapping>
 				<script>
-                    var m = arg[0];
-                    if (m == 1) return 'RIGHT';
-                    if (m == 2) return 'LEFT';
-                    if (m == 3) return 'BOTH';
-                    return 'OFF';
-                </script>
+					var m = arg[0];
+					if (m == 1) return 'RIGHT';
+					if (m == 2) return 'LEFT';
+					if (m == 3) return 'BOTH';
+					return 'OFF';
+				</script>
 			</binding>
 		</hovered>
 	</animation>
@@ -552,8 +458,8 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
-	
+
+
 	<!-- Fuel Pump Switch -->
 	<animation>
 		<type>pick</type>
@@ -604,7 +510,7 @@
 			<z> 0 </z>
 		</axis>
 	</animation>
-	
+
 	<!-- Fuel Selector -->
 	<animation>
 		<type>knob</type>
@@ -647,9 +553,9 @@
 			</binding>
 		</action>
 	</animation>
-		
-	
-	<!--Flaps Lever-->
+
+
+	<!--Flaps Lever -->
 	<animation>
 		<type>pick</type>
 		<visible>true</visible>
@@ -684,9 +590,9 @@
 			<z2-m> -0.14268  </z2-m>
 		</axis>
 	</animation>
-	
-	
-	<!--Instruments-->
+
+
+	<!--Instruments -->
 	<model>
 		<path>Instruments/MD302/MD302.xml</path>
 		<offsets>
@@ -696,43 +602,8 @@
 			<pitch-deg>-3</pitch-deg>
 		</offsets>
 	</model>
-	<!--<model>
-		<path>Instruments/asi/asi.xml</path>
-		<offsets>
-			<x-m> -1.885 </x-m>
-			<y-m> -0.406 </y-m>
-			<z-m> -0.02891 </z-m>
-			<pitch-deg>-3</pitch-deg>
-		</offsets>
-	</model>
 	<model>
-		<path>Instruments/alt/alt.xml</path>
-		<offsets>
-			<x-m> -1.885 </x-m>
-			<y-m> -0.226 </y-m>
-			<z-m> -0.02891 </z-m>
-			<pitch-deg>-3</pitch-deg>
-		</offsets>
-	</model>-->
-	<model>
-		<path>Instruments/GMA350/GMA350.ac</path>
-		<offsets>
-			<x-m> -1.85861 </x-m>
-			<y-m> 0.0 </y-m>
-			<z-m>-0.12359 </z-m>
-			<pitch-deg>-10.5</pitch-deg>
-		</offsets>
-	</model>
-	<model>
-		<path>Instruments/kx165/kx165-1.xml</path>
-		<offsets>
-			<x-m> -2.27 </x-m>
-			<y-m> 0.0 </y-m>
-			<z-m> 0.025 </z-m>
-		</offsets>
-	</model>
-	<model>
-		<path>Instruments/Perspective/GDU1240-pfd.ac</path>
+		<path>Instruments/Perspective/GDU-1240.1.xml</path>
 		<offsets>
 			<x-m> -1.975 </x-m>
 			<y-m> -0.3 </y-m>
@@ -741,48 +612,20 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Instruments/Perspective/GDU1240-mfd.ac</path>
+		<path>Instruments/Perspective/GDU-1240.2.xml</path>
 		<offsets>
 			<x-m> -1.96 </x-m>
 			<y-m> 0.03 </y-m>
 			<z-m> 0.19 </z-m>
 			<heading-deg>-6</heading-deg>
 		</offsets>
-	</model><!--
-	<model>
-		<path>Instruments/GMA350/GMA350.ac</path>
-		<offsets>
-			<x-m> -1.788</x-m>
-			<y-m> 0.0 </y-m>
-			<z-m> -0.09 </z-m>
-			<pitch-deg>-32.5</pitch-deg>
-		</offsets>
 	</model>
-	<model>
-		<path>Instruments/GMC305/GMC305.ac</path>
-		<offsets>
-			<x-m> -1.815</x-m>
-			<y-m> 0.0 </y-m>
-			<z-m> -0.055 </z-m>
-			<pitch-deg>-32.5</pitch-deg>
-		</offsets>
-	</model>-->
 	<!-- Pilot -->
 	<model>
 		<path>../Pilot/pilot.xml</path>
 	</model>
-	<!-- Tableau de bord -->
-	<!--<model>
-    <path>Aircraft/DR400/Models/Interior/Panel/panel.xml</path>
-    <offsets>
-      <x-m> -1.859 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.099 </z-m>
-      <pitch-deg> -5 </pitch-deg>
-    </offsets>
-  </model>-->
-	<!--PEDESTAL-->
-	<!--Throttle Lever-->
+	<!--PEDESTAL -->
+	<!--Throttle Lever -->
 	<animation>
 		<type>slider</type>
 		<object-name>throttle</object-name>
@@ -814,7 +657,7 @@
 		<object-name>throttle</object-name>
 		<property>/controls/engines/engine/throttle</property>
 		<factor>-46</factor>
-		<!--23 degree at each max position-->
+		<!--23 degree at each max position -->
 		<axis>
 			<y>1</y>
 		</axis>
@@ -823,7 +666,7 @@
 			<z-m>-0.26777</z-m>
 		</center>
 	</animation>
-	<!--Mixture Lever-->
+	<!--Mixture Lever -->
 	<animation>
 		<type>slider</type>
 		<object-name>mixture</object-name>
@@ -855,7 +698,7 @@
 		<object-name>mixture</object-name>
 		<property>/controls/engines/engine/mixture</property>
 		<factor>-54</factor>
-		<!--23 degree at each max position-->
+		<!--23 degree at each max position -->
 		<axis>
 			<y>1</y>
 		</axis>
@@ -864,4 +707,1255 @@
 			<z-m>-0.25834</z-m>
 		</center>
 	</animation>
+	<animation>
+		<type>pick</type>
+		<!-- Not an typo -->
+		<object-name>DidectTo</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>DTO</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>DidectTo</tooltip-id>
+				<label>Display Direct To</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>MENU</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>MENU</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>MENU</tooltip-id>
+				<label>Display Menu</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>FPL</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>FPL</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>MENU</tooltip-id>
+				<label>Display Flight Plan page</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>PROC</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>PROC</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>PROC</tooltip-id>
+				<label>Display Procedures page</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>CLR</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>CLR</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>CLR_HOLD</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>CLR</tooltip-id>
+				<label>Clear entry (Middle mouse button to display Navigation Map)
+				</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ENT</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>ENT</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>ENT</tooltip-id>
+				<label>Complete data entry, or confirm selection</label>
+			</binding>
+		</hovered>
+	</animation>
+
+
+
+	<animation>
+		<type>knob</type>
+		<object-name>FmsOuter</object-name>
+		<action>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>FMS_INNER</notification>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>FMS_OUTER</notification>
+			</binding>
+		</shift-action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>FMSOuter</tooltip-id>
+				<label>Data entry / Page selection. Shift to move cursor position /
+					Page Group selection.</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>FmsInner</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>FMS_CRSR</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>FMSInner</tooltip-id>
+				<label>Toggle Cursor on/off</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>COMKey</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-assign</command>
+				<property>/instrumentation/perspective/panel-selected</property>
+				<value>COM</value>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>COMKey</tooltip-id>
+				<label>Cursor to comm frequency</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>CRSKey</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-assign</command>
+				<property>/instrumentation/perspective/panel-selected</property>
+				<value>CRS</value>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>CRSKey</tooltip-id>
+				<label>Select cursor</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>NAVKey</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-assign</command>
+				<property>/instrumentation/perspective/panel-selected</property>
+				<value>NAV</value>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>NavKey</tooltip-id>
+				<label>Cursor to nav frequency</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>knob</type>
+		<object-name>CRS</object-name>
+		<action>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>CRS</notification>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/fg1000/screen2/course-deg</property>
+				<factor>15</factor>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>CRS_CENTER</notification>
+				<offset>1</offset>
+			</binding>
+		</shift-action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>CRS</tooltip-id>
+				<label>Change Nav Course (Shift to center)</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>CRS</object-name>
+		<property>instrumentation/fg1000/screen2/course-deg</property>
+		<center>
+			<x-m>-1.8795</x-m>
+			<y-m>0.062914</y-m>
+			<z-m>0.066281</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<type>knob</type>
+		<object-name>Range</object-name>
+		<action>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>RANGE</notification>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>JOYSTICK_PRESS</notification>
+			</binding>
+		</shift-action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>PAN</tooltip-id>
+				<label>Change map range (Shift to activate map pointer)</label>
+			</binding>
+		</hovered>
+	</animation>
+
+
+	<animation>
+		<type>knob</type>
+		<object-name>HDG</object-name>
+		<action>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>HEADING</notification>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/fg1000/screen1/heading-bug-deg</property>
+				<factor>15</factor>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>HEADING_PRESS</notification>
+			</binding>
+		</shift-action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>HDG</tooltip-id>
+				<label>Change heading bug (Shift to sync)</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>HDG</object-name>
+		<property>instrumentation/fg1000/screen1/heading-bug-deg</property>
+		<center>
+			<x-m>-1.7925</x-m>
+			<y-m>-0.060363</y-m>
+			<z-m>-0.058572</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>KeyA</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>A</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyB</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>B</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyC</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>C</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyD</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>D</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyE</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>E</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyF</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>F</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyG</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>G</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyH</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>H</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyI</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>I</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyJ</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>J</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyK</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>K</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyL</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>L</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyM</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>M</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyN</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>N</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyO</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>O</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyP</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>P</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyQ</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>Q</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyS</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>S</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyR</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>R</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyT</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>T</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyU</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>U</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyV</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>V</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyW</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>W</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyX</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>X</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyY</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>Y</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyZ</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>Z</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key0</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>0</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key1</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key2</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>2</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key3</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>3</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key4</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>4</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key5</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>5</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key6</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>6</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key7</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>7</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key8</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>8</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Key9</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>9</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeySpace</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>
+				</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyDot</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>KEY_INPUT</notification>
+				<offset>.</offset>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KeyENT</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>ENT</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>ENT</tooltip-id>
+				<label>Complete data entry, or confirm selection</label>
+			</binding>
+		</hovered>
+	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>DidectTo</object-name>
+		<object-name>MENU</object-name>
+		<object-name>FPL</object-name>
+		<object-name>PROC</object-name>
+		<object-name>CLR</object-name>
+		<object-name>ENT</object-name>
+		<object-name>HOME</object-name>
+		<object-name>COMKey</object-name>
+		<object-name>NAVKey</object-name>
+		<object-name>CRSKey</object-name>
+		<object-name>XPDRKey</object-name>
+		<object-name>KeyA</object-name>
+		<object-name>KeyB</object-name>
+		<object-name>KeyC</object-name>
+		<object-name>KeyD</object-name>
+		<object-name>KeyE</object-name>
+		<object-name>KeyF</object-name>
+		<object-name>KeyG</object-name>
+		<object-name>KeyH</object-name>
+		<object-name>KeyI</object-name>
+		<object-name>KeyJ</object-name>
+		<object-name>KeyK</object-name>
+		<object-name>KeyL</object-name>
+		<object-name>KeyM</object-name>
+		<object-name>KeyN</object-name>
+		<object-name>KeyO</object-name>
+		<object-name>KeyP</object-name>
+		<object-name>KeyQ</object-name>
+		<object-name>KeyR</object-name>
+		<object-name>KeyS</object-name>
+		<object-name>KeyT</object-name>
+		<object-name>KeyU</object-name>
+		<object-name>KeyV</object-name>
+		<object-name>KeyW</object-name>
+		<object-name>KeyX</object-name>
+		<object-name>KeyY</object-name>
+		<object-name>KeyZ</object-name>
+		<object-name>Key0</object-name>
+		<object-name>Key1</object-name>
+		<object-name>Key2</object-name>
+		<object-name>Key3</object-name>
+		<object-name>Key4</object-name>
+		<object-name>Key5</object-name>
+		<object-name>Key6</object-name>
+		<object-name>Key7</object-name>
+		<object-name>Key8</object-name>
+		<object-name>Key9</object-name>
+		<object-name>KeySpace</object-name>
+		<object-name>KeyDot</object-name>
+		<object-name>KeyENT</object-name>
+		<object-name>HDGBtn</object-name>
+		<object-name>NAVBtn</object-name>
+		<object-name>APRBtn</object-name>
+		<object-name>LVLBtn</object-name>
+		<object-name>FDBtn</object-name>
+		<object-name>APBtn</object-name>
+		<object-name>YDBtn</object-name>
+		<object-name>ALTBtn</object-name>
+		<object-name>VSBtn</object-name>
+
+		<emission>
+			<red> 0.30 </red>
+			<green> 0.30 </green>
+			<blue> 0.30 </blue>
+		</emission>
+	</animation>
+	<!-- Autopilot panel -->
+	<animation>
+		<type>pick</type>
+		<object-name>APbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>AP</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.L0</tooltip-id>
+				<label>Toggle Autopilot</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>FDbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>FD</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.L1</tooltip-id>
+				<label>Toggle Flight Director</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>NAVbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>FD</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.L2</tooltip-id>
+				<label>Select AP NAV mode</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ALTbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>ALT</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.L3</tooltip-id>
+				<label>Select AP Altitude mode</label>
+				<offset>1</offset>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>VSbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>VS</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.L4</tooltip-id>
+				<label>Select AP Vertical Speed mode</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>LVLbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>FLC</notification>
+				<offset>1</offset>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.L5</tooltip-id>
+				<label>Select AP Flight Level mode</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>YDbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>YD</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.R0</tooltip-id>
+				<label>Select AP Yaw Damper</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>HDGbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>HDG</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.R1</tooltip-id>
+				<label>Select AP Heading mode</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>APRbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>APR</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.R2</tooltip-id>
+				<label>Select AP Approach mode</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>VNbtn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>VNV</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.R3</tooltip-id>
+				<label>Select AP Vertical Navigation</label>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>knob</type>
+		<object-name>VScylinder</object-name>
+		<center>
+			<x-m>-1.82174</x-m>
+			<y-m>0.01929</y-m>
+			<z-m>-0.064518</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<action>
+			<binding>
+				<condition>
+					<equals>
+						<property>/autopilot/lateral-mode-button</property>
+						<value>ALT</value>
+					</equals>
+				</condition>
+				<command>FG1000HardKeyPushed</command>
+				<device>1</device>
+				<notification>ALT_INNER</notification>
+				<offset>1</offset>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<condition>
+					<equals>
+						<property>/autopilot/lateral-mode-button</property>
+						<value>ALT</value>
+					</equals>
+				</condition>
+				<command>FG1000HardKeyPushed</command>
+				<device>1</device>
+				<notification>ALT_OUTER</notification>
+				<offset>1</offset>
+			</binding>
+		</shift-action>
+		<increase>
+			<button>0</button>
+			<binding>
+				<condition>
+					<not>
+						<equals>
+							<property>/autopilot/lateral-mode-button</property>
+							<value>ALT</value>
+						</equals>
+					</not>
+				</condition>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>NOSE_UP</notification>
+				<offset>1</offset>
+			</binding>
+		</increase>
+		<decrease>
+			<button>0</button>
+			<binding>
+				<condition>
+					<not>
+						<equals>
+							<property>/autopilot/lateral-mode-button</property>
+							<value>ALT</value>
+						</equals>
+					</not>
+				</condition>
+				<command>FG1000HardKeyPushed</command>
+				<device>2</device>
+				<notification>NOSE_DOWN</notification>
+				<offset>1</offset>
+			</binding>
+
+		</decrease>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>AP.R5</tooltip-id>
+				<label>AP Nose Trim</label>
+			</binding>
+		</hovered>
+	</animation>
+
 </PropertyList>

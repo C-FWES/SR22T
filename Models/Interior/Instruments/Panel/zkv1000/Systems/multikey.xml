@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <multikey>
+    <key n="122">
+      <name>z</name>
+      <desc>ZKV1000 commands</desc>
+      <key n="111">
+        <name>o</name>
+        <desc>Power ON device</desc>
+        <exit/>
+        <binding>
+          <command>nasal</command>
+          <script>zkv1000.powerOn();</script>
+        </binding>
+      </key>
+    </key>
+  </multikey>
+</PropertyList>

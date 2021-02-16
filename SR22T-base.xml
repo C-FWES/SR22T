@@ -272,6 +272,11 @@
 			<serviceable type="bool">true</serviceable>
 			<range type="int" archive="y">1000</range>
 		</radar>
+		<zkv1000>
+			<auto-power type="bool">1</auto-power>
+			<serviceable type="int">1</serviceable>
+			<size-factor type="double">1.1</size-factor>
+		</zkv1000>
 	</instrumentation>
 	<controls>
 		<fuel>
@@ -339,6 +344,9 @@
 			<file>Aircraft/SR22T/Nasal/it-autoflight.nas</file>
 			</itaf>
 		-->
+		<zkv1000>
+            <file>Aircraft/SR22T/Models/Interior/Instruments/Panel/zkv1000/zkv1000.nas</file>
+        </zkv1000>
 		<controls>
 			<file>Nasal/controls_override.nas</file>
 		</controls>

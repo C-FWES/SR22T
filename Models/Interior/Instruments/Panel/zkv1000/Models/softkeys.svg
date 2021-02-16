@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024px"
+   height="768px"
+   viewBox="0 0 1024 768"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="softkeys.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#ffffff"
+     borderopacity="0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="512"
+     inkscape:cy="384"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="836"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs8797" />
+  <metadata
+     id="metadata8800">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Calque 1">
+    <g
+       id="SoftKeysTexts"
+       inkscape:label="SoftKeysTexts"
+       style="display:inline"
+       transform="matrix(1.0043796,0,0,0.99999999,-0.01052084,9.483972e-6)">
+      <rect
+         y="743.99927"
+         x="172.49872"
+         height="24.000597"
+         width="83.8013"
+         id="SoftKey02-bg"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         inkscape:label="SoftKey02-bg" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4917"
+         d="m 172.00229,768.00003 v -24.49098 h 84.29724"
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         transform="scale(0.93272861,1.0721232)"
+         id="SoftKey02-text"
+         y="711.67462"
+         x="229.78027"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="SoftKey02-text"><tspan
+           y="711.67462"
+           x="229.78027"
+           id="tspan4921"
+           sodipodi:role="line"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         id="SoftKey01-bg"
+         width="83.8013"
+         height="24.000597"
+         x="87.698715"
+         y="743.99927"
+         inkscape:label="SoftKey01-bg" />
+      <path
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 87.202289,768.00003 V 743.50905 H 171.49953"
+         id="path5027"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="138.86423"
+         y="711.67462"
+         id="SoftKey01-text"
+         transform="scale(0.93272861,1.0721232)"
+         inkscape:label="SoftKey01-text"><tspan
+           sodipodi:role="line"
+           id="tspan5031"
+           x="138.86423"
+           y="711.67462"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:17.5px;line-height:125%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;writing-mode:lr-tb;text-anchor:middle">XXXXXXXX</tspan></text>
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         id="SoftKey03-bg"
+         width="83.8013"
+         height="24.000597"
+         x="257.29871"
+         y="743.99927"
+         inkscape:label="SoftKey03-bg" />
+      <path
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 256.80229,768.00003 v -24.49098 h 84.29724"
+         id="path_unknownID2"
+         inkscape:connector-curvature="0"
+         inkscape:label="path_unknownID2" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="320.69632"
+         y="711.67462"
+         id="SoftKey03-text"
+         transform="scale(0.93272861,1.0721232)"
+         inkscape:label="SoftKey03-text"><tspan
+           sodipodi:role="line"
+           id="tspan5051"
+           x="320.69632"
+           y="711.67462"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         id="SoftKey04-bg"
+         width="83.8013"
+         height="24.000597"
+         x="342.09872"
+         y="743.99927"
+         inkscape:label="SoftKey04-bg" />
+      <path
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.00480211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 341.60229,768.00003 v -24.49098 h 84.29724"
+         id="path_inknownID1"
+         inkscape:connector-curvature="0"
+         inkscape:label="path_inknownID1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="411.61237"
+         y="711.67462"
+         id="SoftKey04-text"
+         transform="scale(0.93272861,1.0721232)"
+         inkscape:label="SoftKey04-text"><tspan
+           sodipodi:role="line"
+           id="tspan5061"
+           x="411.61237"
+           y="711.67462"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         id="SoftKey06-bg"
+         width="83.8013"
+         height="24.000597"
+         x="511.69873"
+         y="743.99927"
+         inkscape:label="SoftKey06-bg" />
+      <path
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 511.20229,768.00003 v -24.49098 h 84.29724"
+         id="path5067"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="593.44446"
+         y="711.67462"
+         id="SoftKey06-text"
+         transform="scale(0.93272861,1.0721232)"
+         inkscape:label="SoftKey06-text"><tspan
+           sodipodi:role="line"
+           id="tspan5071"
+           x="593.44446"
+           y="711.67462"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         y="743.99927"
+         x="426.89871"
+         height="24.000597"
+         width="83.8013"
+         id="SoftKey05-bg"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         inkscape:label="SoftKey05-bg" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5077"
+         d="m 426.40229,768.00003 v -24.49098 h 84.29724"
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         transform="scale(0.93272861,1.0721232)"
+         id="SoftKey05-text"
+         y="711.67462"
+         x="502.52841"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="SoftKey05-text"><tspan
+           y="711.67462"
+           x="502.52841"
+           id="tspan5081"
+           sodipodi:role="line"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         y="743.99927"
+         x="596.49872"
+         height="24.000597"
+         width="83.8013"
+         id="SoftKey07-bg"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         inkscape:label="SoftKey07-bg" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5087"
+         d="m 596.00229,768.00003 v -24.49098 h 84.29724"
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         transform="scale(0.93272861,1.0721232)"
+         id="SoftKey07-text"
+         y="711.67462"
+         x="684.36053"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="SoftKey07-text"><tspan
+           y="711.67462"
+           x="684.36053"
+           id="tspan5091"
+           sodipodi:role="line"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         y="743.99927"
+         x="681.29871"
+         height="24.000597"
+         width="83.8013"
+         id="SoftKey08-bg"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         inkscape:label="SoftKey08-bg" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5097"
+         d="m 680.80229,768.00003 v -24.49098 h 84.29724"
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         transform="scale(0.93272861,1.0721232)"
+         id="SoftKey08-text"
+         y="711.67462"
+         x="775.27655"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="SoftKey08-text"><tspan
+           y="711.67462"
+           x="775.27655"
+           id="tspan5101-6"
+           sodipodi:role="line"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         y="743.99927"
+         x="850.89874"
+         height="24.000597"
+         width="83.8013"
+         id="SoftKey10-bg"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         inkscape:label="SoftKey10-bg" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5107"
+         d="m 850.40229,768.00003 v -24.49098 h 84.29724"
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         transform="scale(0.93272861,1.0721232)"
+         id="SoftKey10-text"
+         y="711.67462"
+         x="957.10864"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="SoftKey10-text"><tspan
+           y="711.67462"
+           x="957.10864"
+           id="tspan5111-7"
+           sodipodi:role="line"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         id="SoftKey09-bg"
+         width="83.8013"
+         height="24.000597"
+         x="766.09869"
+         y="743.99927"
+         inkscape:label="SoftKey09-bg" />
+      <path
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 765.60229,768.00003 v -24.49098 h 84.29724"
+         id="path5117"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="866.19263"
+         y="711.67462"
+         id="SoftKey09-text"
+         transform="scale(0.93272861,1.0721232)"
+         inkscape:label="SoftKey09-text"><tspan
+           sodipodi:role="line"
+           id="tspan5121-5"
+           x="866.19263"
+           y="711.67462"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         id="SoftKey11-bg"
+         width="83.8013"
+         height="24.000597"
+         x="935.69873"
+         y="743.99927"
+         inkscape:label="SoftKey11-bg" />
+      <path
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 935.20229,768.00003 v -24.49098 h 84.29721"
+         id="path5127"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="1048.0247"
+         y="711.67462"
+         id="SoftKey11-text"
+         transform="scale(0.93272861,1.0721232)"
+         inkscape:label="SoftKey11-text"><tspan
+           sodipodi:role="line"
+           id="tspan5131-3"
+           x="1048.0247"
+           y="711.67462"
+           style="font-size:17.5px;line-height:1.25">XXXXXXXX</tspan></text>
+      <rect
+         y="743.99927"
+         x="2.8987145"
+         height="24.000597"
+         width="83.8013"
+         id="SoftKey00-bg"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         inkscape:label="SoftKey00-bg" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5361-5"
+         d="M 2.402289,768.00003 V 743.50905 H 86.69953"
+         style="display:inline;fill:#585959;fill-opacity:0.01332003;stroke:#b6bcbe;stroke-width:1.0045768px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         transform="scale(0.93272862,1.0721232)"
+         id="SoftKey00-text"
+         y="711.67462"
+         x="47.948124"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:label="SoftKey00-text"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:17.5px;line-height:125%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           y="711.67462"
+           x="47.948124"
+           id="tspan5365"
+           sodipodi:role="line">XXXXXXXX</tspan></text>
+    </g>
+  </g>
+</svg>

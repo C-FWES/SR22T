@@ -1,0 +1,1 @@
+displayClass.updateEIS = func;

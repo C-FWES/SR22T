@@ -274,8 +274,11 @@
 		</radar>
 		<zkv1000>
 			<auto-power type="bool">1</auto-power>
-			<serviceable type="int">1</serviceable>
+			<serviceable type="bool">true</serviceable>
 			<size-factor type="double">1.1</size-factor>
+			<eis>
+      			<type>single-prop</type>
+   			</eis>
 		</zkv1000>
 	</instrumentation>
 	<controls>

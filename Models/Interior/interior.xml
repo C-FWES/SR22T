@@ -45,6 +45,10 @@
 				<command>property-toggle</command>
 				<property>sim/model/click</property>
 			</binding>
+			<binding>
+        		<command>nasal</command>
+        		<script>zkv1000.powerOn();</script>
+     		</binding>
 		</action>
 	</animation>
 	<animation>

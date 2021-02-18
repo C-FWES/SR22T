@@ -271,7 +271,7 @@ var powerOff = func {
 
     foreach (var timer; keys(data.timers)) {
         data.timers[timer].stop();
-        if (timer == '20Hz' or timer == '1Hz')
+        if (timer == '80Hz' or timer == '40Hz')
             continue;
         delete(data.timers, timer);
     }

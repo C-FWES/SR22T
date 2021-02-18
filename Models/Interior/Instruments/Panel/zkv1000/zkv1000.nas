@@ -87,8 +87,8 @@ var data = { # set of data common to all devices
         },
     },
     timers : {
-        '20Hz': maketimer (
-            0.05,
+        '80Hz': maketimer (
+            0.0125,
             func {
                 data.roll = getprop('/orientation/roll-deg');
                 data.pitch = getprop('orientation/pitch-deg');
@@ -99,8 +99,8 @@ var data = { # set of data common to all devices
                 data.aoa = getprop('/orientation/alpha-deg');
             }
         ),
-        '1Hz': maketimer (
-            1,
+        '40Hz': maketimer (
+            0.025,
             func {
                 data.wow = getprop('/gear/gear/wow');
                 data.lat = getprop('/position/latitude-deg');

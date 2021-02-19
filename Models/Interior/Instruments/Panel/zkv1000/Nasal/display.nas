@@ -415,11 +415,11 @@ var displayClass = {
     showInitProgress : func {
 #{{{
         if (me.device.role == 'PFD') {
-            me.timers.updateAI     = maketimer(0.1, me, me.updateAI     );
+            me.timers.updateAI     = maketimer(0.025, me, me.updateAI     );
             me.timers.updateVSI    = maketimer(0.1, me, me.updateVSI    );
-            me.timers.updateIAS    = maketimer(0.1, me, me.updateIAS    );
-            me.timers.updateALT    = maketimer(0.2, me, me.updateALT    );
-            me.timers.updateHSI    = maketimer(0.2, me, me.updateHSI    );
+            me.timers.updateIAS    = maketimer(0.025, me, me.updateIAS    );
+            me.timers.updateALT    = maketimer(0.025, me, me.updateALT    );
+            me.timers.updateHSI    = maketimer(0.025, me, me.updateHSI    );
             me.timers.updateTIME   = maketimer(1.0, me, me.updateTIME   );
             me.timers.updateOAT    = maketimer(3.0, me, me.updateOAT    );
             me.timers.updateTAS    = maketimer(0.5, me, me.updateTAS    );

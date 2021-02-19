@@ -607,7 +607,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/SR22T/Models/Interior/Instruments/Panel/zkv1000/pfd.xml</path>
+		<path>Aircraft/SR22T/Models/Interior/Instruments/Panel/zkv1000/pfd-pilot.xml</path>
 		<offsets>
 			<x-m> -1.975 </x-m>
 			<y-m> -0.3 </y-m>

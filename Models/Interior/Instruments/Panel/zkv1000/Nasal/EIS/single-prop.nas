@@ -22,7 +22,7 @@ displayClass.updateEIS = func {
         me.screenElements['POWER-PERCENT-text']
             .setText(sprintf('% 3u', power * 100));
         me.screenElements['RPM-text']
-            .setText(sprintf(math.round(getprop('/engines/engine/rpm'), 50)));
+            .setText(sprintf(math.round(getprop('/engines/engine/rpm'), 10)));
         me.screenElements['MAN-Hg-text']
             .setText(sprintf('%.1d', getprop('/engines/engine/mp-inhg')));
         me.screenElements['FUEL-FLOW-text']
@@ -60,7 +60,7 @@ displayClass.updateEIS = func {
                 .setText(sprintf('%i', getprop('/engines/engine/egt-degf')));
         }
     }
-    settimer(func me.updateEIS(), 0.2);
+    settimer(func me.updateEIS(), 0.025);
     me._eis_count += 1;
 };
 

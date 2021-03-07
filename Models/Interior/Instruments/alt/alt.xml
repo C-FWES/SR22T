@@ -4,6 +4,17 @@
 
   <path>alt.ac</path>
 
+  
+    <animation>
+	  <type>select</type>
+	    <condition>
+        <equals>
+		      <property>instrumentation/md302</property>
+          <value>0</value>
+        </equals>
+	    </condition>
+  </animation>
+
   <animation>
     <object-name>fond</object-name>
     <object-name>face</object-name>

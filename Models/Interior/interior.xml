@@ -624,6 +624,39 @@
 			<heading-deg>-6</heading-deg>
 		</offsets>
 	</model>
+
+
+
+	<model>
+		<path>Instruments/asi/asi.xml</path>
+		<offsets>
+			<x-m> -1.885 </x-m>
+			<y-m> -0.406 </y-m>
+			<z-m> -0.02891 </z-m>
+			<pitch-deg>-3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Instruments/ai/ai.xml</path>
+		<offsets>
+			<x-m> -1.885 </x-m>
+			<y-m> -0.317 </y-m>
+			<z-m> -0.02891 </z-m>
+			<pitch-deg>-3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Instruments/alt/alt.xml</path>
+		<offsets>
+			<x-m> -1.885 </x-m>
+			<y-m> -0.226 </y-m>
+			<z-m> -0.02891 </z-m>
+			<pitch-deg>-3</pitch-deg>
+		</offsets>
+	</model>
+
+
+
 	<!-- Pilot -->
 	<model>
 		<path>../Pilot/pilot.xml</path>

@@ -111,6 +111,14 @@
 							<dialog-name>pushback</dialog-name>
 						</binding>
 					</item>
+					<item>
+						<label>Toggle MD302 On/Off</label>
+						<name>md302</name>
+						<binding>
+							<command>property-toggle</command>
+							<property>instrumentation/md302</property>
+						</binding>
+					</item>
 				</menu>
 			</default>
 		</menubar>
@@ -201,6 +209,7 @@
 		<securing-state type="int">0</securing-state>
 	</payload>
 	<instrumentation>
+	<md302 type="bool">true</md302>
 		<heading-indicator>
 			<heading-bug-deg type="float">0</heading-bug-deg>
 		</heading-indicator>
@@ -275,7 +284,7 @@
 		<zkv1000>
 			<auto-power type="bool">1</auto-power>
 			<serviceable type="bool">true</serviceable>
-			<size-factor type="double">1.1</size-factor>
+			<size-factor type="double">1.21</size-factor>
 			<eis>
       			<type>single-prop</type>
    			</eis>
@@ -342,11 +351,11 @@
     </keyboard>
 	</input>
 	<nasal>
-		<!--
-		<itaf>
+		
+		<!-- <itaf>
 			<file>Aircraft/SR22T/Nasal/it-autoflight.nas</file>
-			</itaf>
-		-->
+		</itaf> -->
+		
 		<zkv1000>
             <file>Aircraft/SR22T/Models/Interior/Instruments/Panel/zkv1000/zkv1000.nas</file>
         </zkv1000>

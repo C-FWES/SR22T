@@ -610,7 +610,7 @@
 		<path>Aircraft/SR22T/Models/Interior/Instruments/Panel/zkv1000/pfd-pilot.xml</path>
 		<offsets>
 			<x-m> -1.975 </x-m>
-			<y-m> -0.3 </y-m>
+			<y-m> -0.285 </y-m>
 			<z-m> 0.19 </z-m>
 			<heading-deg>0</heading-deg>
 		</offsets>
@@ -619,7 +619,7 @@
 		<path>Aircraft/SR22T/Models/Interior/Instruments/Panel/zkv1000/mfd.xml</path>
 		<offsets>
 			<x-m> -1.96 </x-m>
-			<y-m> 0.03 </y-m>
+			<y-m> 0.064 </y-m>
 			<z-m> 0.19 </z-m>
 			<heading-deg>-6</heading-deg>
 		</offsets>

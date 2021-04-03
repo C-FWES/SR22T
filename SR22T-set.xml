@@ -2,8 +2,8 @@
 <PropertyList include="SR22T-base.xml">
 	<sim>
 		<description>Cirrus SR22T (JSBSim)</description>
-		<author>Benedikt Wolf (D-ECHO)</author>
-		<aircraft-version>03/2020</aircraft-version>
+		<author>Benedikt Wolf (D-ECHO), C-FWES</author>
+		<aircraft-version>04/2021</aircraft-version>
 		<status>alpha</status>
 		<flight-model archive="y">jsb</flight-model>
 		<aero archive="y">SR22T-jsb</aero>

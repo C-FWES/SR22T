@@ -367,6 +367,7 @@
 			<file>Nasal/sr22t.nas</file>
 			<file>Nasal/electrical.nas</file>
 			<file>Nasal/fg1000_sr22t.nas</file>
+			<file>Nasal/shake.nas</file>
 		</sr22t>
 		<canvas_md302>
 			<file>Aircraft/SR22T/Models/Interior/Instruments/MD302/MD302_ai.nas</file>
